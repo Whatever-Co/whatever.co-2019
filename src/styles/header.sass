@@ -1,0 +1,35 @@
+#header
+  position: relative
+  z-index: 2000
+  margin: 20px 0 105px
+  display: flex
+  justify-content: space-between
+
+#logo
+  a
+    border: none
+    img
+      width: 180px
+      margin-top: 5px
+
+#menu
+  padding: 5px 2px 0
+  margin: 0 -30px
+  li
+    display: inline-block
+    list-style: none
+    font: normal 300 18px acumin-pro, sans-serif
+    margin: 0 29px
+    .dot
+      display: inline-block
+      width: 10px
+      height: 10px
+      border-radius: 10px
+      background-color: black
+      transform: translateY(-15px)
+      &.inactive
+        visibility: hidden
+    a
+      color: $black
+      text-decoration: none
+      border: none

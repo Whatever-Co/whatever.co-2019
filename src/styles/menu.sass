@@ -1,0 +1,91 @@
+#floating-menu
+  position: fixed
+  display: table
+  z-index: 3000
+  left: 0
+  top: 0
+  width: 100%
+  height: 80px
+  padding-bottom: 4px
+  text-align: center
+  transition: transform 0.1s ease-out
+  > div
+    display: table-cell
+    padding: 0
+    margin: 0
+    width: 100%
+    vertical-align: middle
+    background-color: rgba(255, 255, 255, 0.9)
+    a
+      display: inline-block
+      list-style: none
+      font: normal 300 18px acumin-pro, sans-serif
+      margin: 0 40px
+      border: none
+      .dot
+        display: inline-block
+        width: 10px
+        height: 10px
+        border-radius: 10px
+        background-color: black
+        transform: translateY(-15px)
+        &.inactive
+          visibility: hidden
+  &.close
+    transform: translateY(-100%)
+
+#menu-button
+  position: fixed
+  z-index: 3100
+  right: 22px
+  top: 22px
+  width: 46px
+  height: 40px
+  padding: 10px
+  cursor: pointer
+  transform: translateY(-60px)
+  transition: transform 0.2s ease-out
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  &.enable
+    transform: translateY(0)
+  div
+    position: absolute
+    border: 2px solid $black
+    border-radius: 4px
+    width: 16px
+    transition: all 0.1s ease-out
+    &.upper-left
+      left: 10px
+      top: 10px
+      transform-origin: left top
+    &.upper-right
+      right: 10px
+      top: 10px
+      transform-origin: right top
+    &.middle
+      width: 26px
+      left: 10px
+      top: 18px
+    &.lower-left
+      left: 10px
+      bottom: 10px
+      transform-origin: left bottom
+    &.lower-right
+      right: 10px
+      bottom: 10px
+      transform-origin: right bottom
+
+  &.close
+    div
+      transition: all 0.1s ease-out
+    .upper-left
+      transform: translateX(6px) rotate(45deg)
+    .upper-right
+      transform: translateX(-6px) rotate(-45deg)
+    .middle
+      transform: scaleX(0)
+    .lower-left
+      transform: translateX(6px) rotate(-45deg)
+    .lower-right
+      transform: translateX(-6px) rotate(45deg)
+

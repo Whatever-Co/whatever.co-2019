@@ -1,0 +1,52 @@
+.work-list
+    hr
+        height: 1px
+        border: none
+        border-top: 1px solid #f0f0f0
+        
+    ul.region-list
+        list-style-type: none
+        padding: 4px 0 0
+        margin: 0 0 24px
+        text-align: center
+        font: normal 300 18px acumin-pro, sans-serif
+        li
+            display: inline-block
+            margin: 0 44px
+            color: #AAA
+            font-size: 90%
+            cursor: pointer
+            user-select: none
+            position: relative
+            &.selected
+                color: black
+            .dot
+                display: inline-block
+                width: 8px
+                height: 8px
+                background-color: black
+                border-radius: 8px
+                transform: translateY(-15px)
+                &.inactive
+                    visibility: hidden
+
+    ul.tag-list
+        list-style-type: none
+        padding: 0
+        margin: 25px -5px 0
+        li
+            display: inline-block
+            padding: 5px 10px
+            margin: 5px
+            background-color: #f2f2f2
+            border-radius: 5px
+            font-size: smaller
+            cursor: pointer
+            user-select: none
+            position: relative
+            &.selected
+                color: white
+                background-color: #666666
+
+    .work-items
+        margin: 98px -30px 0

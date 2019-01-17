@@ -1,0 +1,323 @@
+body
+  padding: 15px 25px 100px
+  font-size: 14px
+  -webkit-text-size-adjust: 100%
+  letter-spacing: 0.022em
+  // background: url(/assets/_/sp/about-en.png) top left / 320px auto no-repeat
+
+hr.line
+  margin: 15px 0
+  height: 1px
+  background-size: 480px 1px
+
+
+#header
+  margin: 58px 0 69px
+  justify-content: center
+
+#logo
+  a
+    display: block
+    width: 69%
+    margin: 18px auto 0
+    img
+      width: 100%
+      height: auto
+
+#menu
+  display: none
+
+#floating-menu
+  height: auto
+  > div a
+    display: block
+    height: 61px
+    margin: 0 15px
+    padding-top: 19px
+    padding-right: 13px
+    font-size: 14px
+    background-image: url(/assets/line.png)
+    background-size: 480px 1px
+    background-position: bottom
+    background-repeat: repeat-x
+    .dot
+      width: 7px
+      height: 7px
+      transform: translate(-1px,-6px)
+    &:last-child
+      background: none
+
+#menu-button
+  right: 5px
+  top: 5px
+  transform: none
+
+
+.statement
+  width: 100%
+  .logo
+    margin: -69px auto 54px
+    width: 100%
+    transform: scale(1.1, 1.1)
+  .logo3
+    margin: 0 auto 84px
+    width: 100%
+    font-size: 11px
+    line-height: 1.95em
+    p
+      padding-left: 0
+      white-space: nowrap
+    img
+      width: 74%
+      display: block
+      margin: 22px auto 0
+  .text
+    width: 96.6%
+    margin: 2px auto 72px
+  table
+    margin: 0 0 22px 5px
+    font-size: 10.5px
+    line-height: 1.75em
+
+
+.about
+  .about-text
+    margin: 0 4px 20px
+    width: 96.5%
+
+.entry
+  margin: 0 -25px
+  padding: 0 25px
+  background-position: 0 0
+  &.with-image
+    padding-top: 25px
+
+  .inner
+    border-width: 2px
+    border-radius: 6px
+    padding: 0
+    background-image: none
+
+    h1.title
+      margin-top: 10px
+      margin-bottom: 0
+      font-size: 15px
+    .date
+      margin-bottom: 34px
+      font-size: 11px
+    .body
+      p, table
+        margin: 15px 0
+      .award, .credit, .tags
+        th, td
+          display: block
+          text-align: left
+        th
+          margin-top: 10px
+          margin-bottom: 3px
+          font-size: 14px
+        td
+          font-size: 12px
+        img
+          max-height: 30px
+          margin-right: 15px
+      .credit td > span
+        line-height: 1.5
+        margin-top: 4px
+      .case-study-link
+        background-image: none !important
+        padding: 0
+        margin: 0
+        margin-bottom: 1.5em
+        height: auto
+      .tags .work-list ul.tag-list
+        margin: 0 -3px 0
+      >hr
+        display: block
+
+
+.contact
+  padding: 0
+  .contact-text
+    img
+      width: 93.9%
+      display: block
+      margin: 0 5px 81px
+  .mail-link
+    margin-bottom: 78px
+    a
+      padding: 12px 32px
+      font-size: smaller
+      transform: none
+  .region
+    margin-bottom: 58px
+    .name
+      font-size: 19.5px
+      margin-bottom: 24px
+      margin-left: 3px
+    table
+      font-size: 90%
+      line-height: 1.53em
+      th
+        padding: 0 18px 4px 0
+        white-space: nowrap
+      td
+        padding: 0 0 4px
+
+
+.member-list
+  .regions
+    margin-top: -10px
+    margin-bottom: 33px
+    font-size: 13px
+    li
+      margin: 0 20px 16px
+      .dot
+        width: 4px
+        height: 4px
+        transform: translateY(-8px)
+
+.member
+  margin: 25px -25px 0
+  &.list
+    margin-bottom: 30px
+  &.open
+    margin-bottom: 35px
+
+  > div
+    padding: 15px
+    padding-bottom: 0
+
+    .inner
+      padding: 0 15px
+
+    .name-title
+      height: auto
+      padding: 0
+      .title
+        font-size: 13px
+        margin-bottom: 0
+      .name-ja
+        display: block
+        margin-bottom: -10px
+        font-size: 20px
+      .name-en
+        font-size: 11px
+        margin: 0
+      .region
+        font-size: 12px
+        margin-top: 7px
+
+    .more
+      margin-top: 30px
+      .line
+        margin: 20px auto 0
+        width: 100%
+      .body
+        margin-top: 0
+      .links
+        margin-bottom: 0
+
+.work-item
+  float: none
+  width: 100%
+  height: auto
+  margin: 0 0 20px
+  padding: 15px
+  .inner
+    margin: 0
+    border-width: 2px
+    border-radius: 6px
+    background-position: -17px -17px
+  .title
+    margin-top: 20px
+    margin-bottom: 7px
+
+.member-detail
+  margin: 0
+  h2
+    margin-bottom: 30px
+
+  .works-list
+    margin: 0 -25px
+
+  .news-list
+    padding: 0
+    tr
+      padding: 15px 10px
+      border-width: 2px
+      border-radius: 6px
+      td
+        display: block
+        text-align: center
+      th
+        display: block
+        width: 100%
+        text-align: center
+        font-weight: normal
+        font-size: 11px
+        line-height: 1.4
+        margin-bottom: 4px
+
+#footer
+  .copyright
+    position: absolute
+    left: 15px
+    top: 15px
+    transform-origin: left top
+  .buttons
+    z-index: 3000
+    width: 100%
+    left: 0
+    bottom: 0
+    padding: 13px
+    transform: none
+    button
+      float: left
+      width: 31px
+      height: 31px
+      background-size: 31px 31px
+    .wallpaper
+      margin-bottom: 0
+      background-image: url(/assets/wallpaper-sp.png)
+      &:hover
+        width: 31px
+        background-image: url(/assets/wallpaper-sp.png)
+    .facebook
+      margin-bottom: 0
+      margin-right: 10px
+      background-image: url(/assets/facebook-sp.png)
+      &:hover
+        background-image: url(/assets/facebook-sp.png)
+    .twitter
+      margin-bottom: 0
+      margin-right: 10px
+      background-image: url(/assets/twitter-sp.png)
+      &:hover
+        background-image: url(/assets/twitter-sp.png)
+    .top
+      position: absolute
+      right: 13px
+      background-image: url(/assets/top-sp.png)
+      &:hover
+        background-image: url(/assets/top-sp.png)
+
+.work-list
+  margin-top: -7px
+  ul.region-list
+    margin: -11px -25px 21px
+    font-size: 13px
+    li
+      margin: 0 14px
+      .dot
+        width: 4px
+        height: 4px
+        transform: translateY(-7px)
+  ul.tag-list
+    margin: 22px 0 48px
+    li
+      padding: 3px 6px
+      margin: 3px
+      font-size: 11px
+  .work-items
+    margin: 0 -25px
