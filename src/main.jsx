@@ -45,7 +45,7 @@ var routes = (
             <DefaultRoute handler={Statement} />
 
             <Route path="about/" handler={About} />
-            <Route path="members/" handler={MemberList}>
+            <Route path="team/" handler={MemberList}>
                 <Route path="tokyo/" handler={Dummy} />
                 <Route path="new-york/" handler={Dummy} />
                 <Route path="taipei/" handler={Dummy} />
@@ -67,7 +67,7 @@ var routes = (
             <DefaultRoute handler={Statement} />
 
             <Route path="about/" handler={About} />
-            <Route path="members/" handler={MemberList}>
+            <Route path="team/" handler={MemberList}>
                 <Route path="tokyo/" handler={Dummy} />
                 <Route path="new-york/" handler={Dummy} />
                 <Route path="taipei/" handler={Dummy} />
@@ -86,7 +86,7 @@ var routes = (
         </Route>
 
         <Route name="About" path="about/" handler={About} />
-        <Route name="MemberList" path="members/" handler={MemberList}>
+        <Route name="MemberList" path="team/" handler={MemberList}>
             <Route path="tokyo/" handler={Dummy} />
             <Route path="new-york/" handler={Dummy} />
             <Route path="taipei/" handler={Dummy} />

@@ -17,7 +17,7 @@ var Member = React.createClass({
     mixins: [Navigation, State, Lang],
 
     _onClick() {
-        this.transitionTo(`${this.context.langPrefix}/members/${this.props.member.slug}/`)
+        this.transitionTo(`${this.context.langPrefix}/team/${this.props.member.slug}/`)
     },
 
     _onClickLink(e) {
@@ -121,7 +121,7 @@ module.exports = React.createClass({
                 member.mode = 'list'
             }
         })
-        var m = this.getPath().match("\/members\/(.+)\/")
+        var m = this.getPath().match("\/team\/(.+)\/")
         var r = m ? m[1] : ""
         this.state.regions.forEach(region => region.selected = r == region.slug)
         return state
@@ -145,9 +145,9 @@ module.exports = React.createClass({
 
     _onClickRegion(region) {
         if (region.slug) {
-            this.transitionTo(`${this.context.langPrefix}/members/${region.slug}/`)
+            this.transitionTo(`${this.context.langPrefix}/team/${region.slug}/`)
         } else {
-            this.transitionTo(`${this.context.langPrefix}/members/`)
+            this.transitionTo(`${this.context.langPrefix}/team/`)
         }
     },
 
@@ -164,7 +164,7 @@ module.exports = React.createClass({
             return this._memberRegions(member).indexOf(region.name) >= 0
         })
         return (
-            <DocumentTitle title="MEMBERS ● Whatever Inc.">
+            <DocumentTitle title="TEAM ● Whatever Inc.">
                 <div className="member-list">
                     <ul className="regions" style={({ display: region ? "block" : "none" })}>
                         {this.state.regions.map(region => {

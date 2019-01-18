@@ -143,7 +143,7 @@ module.exports = React.createClass({
     componentDidUpdate() {
         if (this.getPathname() == this.context.langPrefix + '/about/') {
             this._setMap();
-            $('a[href^="/members/"]', this.getDOMNode()).click(e => {
+            $('a[href^="/team/"]', this.getDOMNode()).click(e => {
                 e.preventDefault();
                 this.transitionTo(this.context.langPrefix + $(e.currentTarget).attr('href'));
             });

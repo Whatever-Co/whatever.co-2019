@@ -132,7 +132,7 @@ module.exports = React.createClass({
                         company = null
                     }
                     if (link && link.match(/^[a-z]+$/)) {
-                        link = `/members/${link}/`
+                        link = `/team/${link}/`
                     }
                     if (elements.length > 1) {
                         elements.push(' / ')
