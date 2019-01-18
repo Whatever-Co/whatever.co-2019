@@ -80,7 +80,7 @@ module.exports = React.createClass({
         if (tag) {
             var selected = tag.split(' ')
             entries.forEach(entry => {
-                var matched = entry.terms.post_tag.filter(tag => selected.indexOf(tag.slug) >= 0)
+                var matched = entry.terms.post_tag ? entry.terms.post_tag.filter(tag => selected.indexOf(tag.slug) >= 0) : []
                 entry.match = matched.length == selected.length
             })
         } else {
