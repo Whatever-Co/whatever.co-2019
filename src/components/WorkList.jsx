@@ -51,7 +51,7 @@ module.exports = React.createClass({
     },
 
     getTags(entries) {
-        var tags = _.flatten(entries.map(entry => entry.terms.post_tag))
+        var tags = _.flatten(entries.map(entry => entry.terms.post_tag || []))
         tags = _.uniq(tags, false, "ID").filter(tag => !tag.description.match(/member/))
         return _.sortBy(tags, "name")
     },
