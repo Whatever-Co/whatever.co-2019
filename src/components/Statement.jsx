@@ -28,8 +28,8 @@ module.exports = React.createClass({
             names: ['富永 勇亮', '川村 真司', 'Saqoosha']
         },
         zh: {
-            text_pc: 'dot by dot 、PARTY New York 、PARTY Taipei<br/>合併成立新公司「WHATEVER」',
-            text_sp: 'dot by dot 、PARTY New York 、PARTY Taipei<br/>合併成立新公司「WHATEVER」',
+            text_pc: 'dot by dot 、PARTY New York 、PARTY Taipei<br/>合併成立新公司「Whatever」',
+            text_sp: 'dot by dot 、PARTY New York 、PARTY Taipei<br/>合併成立新公司「Whatever」',
             image_pc: '/assets/statement-zh.svg',
             image_sp: '/assets/statement-zh-sp.svg',
             alt: 'PARTY (New York & Taipei) 是熱愛動手打造奇特與美好事物的創意公司。dot by dot 是熱愛動腦發想創意、思考策略的數位製作公司。看似不同，實則極為相似：我們都是動腦想又動手做的創意人—相信只有如此才能實現天馬行空的點子。 全球有許多代理商和製作公司標榜相似的理念，但真正落實的僅有少數。我們的挑戰是向世界證明：透過東京、紐約、柏林、台北的專業團隊，我們有能力將任何想像化為現實。',
