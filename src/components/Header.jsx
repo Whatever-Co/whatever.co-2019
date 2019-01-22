@@ -44,7 +44,7 @@ module.exports = React.createClass({
     },
 
     render() {
-        var showLogo = !this.getPath().match(/^\/(en\/)?$/)
+        var showLogo = !this.getPath().match(/^\/([a-z]{2}\/)?$/)
         return (
             <div id="header">
                 <div id="logo" style={({ visibility: showLogo ? "visible" : "hidden" })}>
