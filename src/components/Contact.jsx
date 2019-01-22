@@ -59,6 +59,31 @@ module.exports = React.createClass({
                 },
             ]
         },
+        zh: {
+            image_pc: '/assets/contact2-zh.svg',
+            image_sp: '/assets/contact-zh-sp.svg',
+            items: ['地址', '電話', '負責人', 'Address TBD'],
+            companies: [
+                {
+                    name: "TOKYO",
+                    address: "2F, HOLSTER, TOC-2nd Building, 1-17-1 Shibuya, Shibuya-ku, Tokyo,  150-0002, Japan",
+                    phone: "+81-3-6427-6022",
+                    president: "Yusuke Tominaga ",
+                },
+                {
+                    name: "NEW YORK",
+                    address: "347 W 36th St, #902 New York, NY 10018 U.S.A.",
+                    phone: "+1-347-801-7789",
+                    president: "Masashi Kawamura / Qanta Shimizu (<a href='https://bassdrum.org/' target='_blank'>BASSDRUM</a>)",
+                },
+                {
+                    name: "台北",
+                    address: "台北市北平東路 30-2 號 4 樓",
+                    phone: "+886-908-222-101",
+                    president: "Eiji Muroichi",
+                },
+            ]
+        },
     },
 
     getInitialState() {
