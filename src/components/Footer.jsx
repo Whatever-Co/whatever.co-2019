@@ -2,14 +2,8 @@ var React = require('react')
 var $ = require('jquery')
 var _ = require('underscore')
 
-// var DotEvents = require('./Dots/Events')
-
 
 module.exports = React.createClass({
-
-    _onClickWP() {
-        // DotEvents.emit('saveAsPNG')
-    },
 
     _onClickFB() {
         FB.ui({
@@ -41,6 +35,8 @@ module.exports = React.createClass({
             <div id="footer">
                 <img className="copyright" src="/assets/copyright.png" />
                 <div className="buttons">
+                    <button className="facebook" />
+                    <button className="twitter" />
                     <button className="top" onClick={this._onClickTop} />
                 </div>
             </div>
