@@ -39,13 +39,15 @@ module.exports = React.createClass({
 
     componentDidMount() {
         this._setActive()
+        window.addEventListener('click', this._hideLangSelector)
     },
 
     componentWillReceiveProps() {
         this._setActive()
     },
 
-    _toggleLangMenu() {
+    _toggleLangMenu(e) {
+        e.stopPropagation()
         this.setState({ langSelector: !this.state.langSelector })
     },
 
@@ -56,7 +58,7 @@ module.exports = React.createClass({
         location.href = next
     },
 
-    _onMouseLeave() {
+    _hideLangSelector() {
         this.setState({ langSelector: false })
     },
 
@@ -81,7 +83,7 @@ module.exports = React.createClass({
                     <li className="slash"><img src="/assets/slash.png" width="11" height="20" /></li>
                     <li className="language" onClick={this._toggleLangMenu}>LANGUAGE <span className={cx({ triangle: true, opening: this.state.langSelector })} /></li>
                 </ul>
-                <div className="lang-selector" style={{ visibility: this.state.langSelector ? "visible" : "hidden" }} onMouseLeave={this._onMouseLeave}>
+                <div className="lang-selector" style={{ visibility: this.state.langSelector ? "visible" : "hidden" }} onMouseLeave={this._hideLangSelector}>
                     <ul>
                         {this.state.languages.map(lang => { return (<li onClick={currentLang == lang[0] ? null : this._selectLang.bind(this, lang[0])} className={cx({ current: currentLang == lang[0] })} key={lang[1]}>{lang[1]}</li>) })}
                     </ul>
