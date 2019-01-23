@@ -41,7 +41,7 @@ module.exports = React.createClass({
             isEnable: false,
             isOpen: false,
             items: MenuData.map(item => _.clone(item)),
-            languages: [['', '日本語'], ['en', 'English'], ['zh', '繁體中文']],
+            languages: [['ja', '日本語'], ['en', 'English'], ['zh', '繁體中文']],
         }
     },
 
@@ -68,7 +68,7 @@ module.exports = React.createClass({
     _selectLang(lang) {
         var m = this.getPath().match(/^(\/[a-z]{2})?(\/.*)/)
         var path = m[2]
-        var next = location.origin + (lang ? '/' + lang + path : path)
+        var next = location.origin + '/' + lang + path
         location.href = next
     },
 
