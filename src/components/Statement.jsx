@@ -39,7 +39,6 @@ module.exports = React.createClass({
     },
 
     getInitialState() {
-        console.log(this.context)
         return this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
     },
 

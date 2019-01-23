@@ -5,6 +5,27 @@
   display: flex
   justify-content: space-between
 
+  .lang-selector
+    position: absolute
+    border: 1px solid black
+    right: 0
+    top: 46px
+    font-size: 13.5px
+    white-space: nowrap
+    text-align: center
+    background-color: white
+    ul
+      list-style: none
+      margin: 10px 20px 10px
+      padding: 0
+      line-height: 2.4em
+      user-select: none
+      li
+        cursor: pointer
+        &.current
+          cursor: default
+          color: #a6a6a6
+
 #logo
   a
     border: none
@@ -13,13 +34,14 @@
       margin-top: 5px
 
 #menu
-  padding: 5px 2px 0
+  padding: 9px 2px 0
   margin: 0 -30px
   li
     display: inline-block
     list-style: none
-    font: normal 300 18px acumin-pro, sans-serif
-    margin: 0 29px
+    font: normal 300 17px acumin-pro, sans-serif
+    margin: 0 19px
+    user-select: none
     .dot
       display: inline-block
       width: 10px
@@ -33,3 +55,23 @@
       color: $black
       text-decoration: none
       border: none
+
+    &.slash
+      margin: 0 20px 0 18px
+      transform: translateY(5px)
+
+    &.language
+      font-size: 13.5px
+      cursor: pointer
+      .triangle
+        display: inline-block
+        margin: 0 9px 0 7px
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 5px 4px 0 4px
+        border-color: black transparent transparent transparent
+        transform: translateY(-2px)
+      .opening
+        border-width: 0 4px 5px 4px
+        border-color: transparent transparent black transparent

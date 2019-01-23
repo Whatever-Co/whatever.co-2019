@@ -22,7 +22,9 @@ module.exports = React.createClass({
                 var copy = _.clone(item)
                 copy.active = false
                 return copy
-            }), false)
+            }), false),
+            langSelector: false,
+            languages: [['', '日本語'], ['en', 'English'], ['zh', '繁體中文']]
         }
     },
 
@@ -43,8 +45,25 @@ module.exports = React.createClass({
         this._setActive()
     },
 
+    _toggleLangMenu() {
+        this.setState({ langSelector: !this.state.langSelector })
+    },
+
+    _selectLang(lang) {
+        var m = this.getPath().match(/^(\/[a-z]{2})?(\/.*)/)
+        var path = m[2]
+        var next = location.origin + (lang ? '/' + lang + path : path)
+        location.href = next
+    },
+
+    _onMouseLeave() {
+        this.setState({ langSelector: false })
+    },
+
     render() {
         var showLogo = !this.getPath().match(/^\/([a-z]{2}\/)?$/)
+        var m = this.getPath().match(/^\/([a-z]{2})\//)
+        var currentLang = m ? m[1] : ''
         return (
             <div id="header">
                 <div id="logo" style={({ visibility: showLogo ? "visible" : "hidden" })}>
@@ -59,7 +78,14 @@ module.exports = React.createClass({
                             </li>
                         )
                     })}
+                    <li className="slash"><img src="/assets/slash.png" width="11" height="20" /></li>
+                    <li className="language" onClick={this._toggleLangMenu}>LANGUAGE <span className={cx({ triangle: true, opening: this.state.langSelector })} /></li>
                 </ul>
+                <div className="lang-selector" style={{ visibility: this.state.langSelector ? "visible" : "hidden" }} onMouseLeave={this._onMouseLeave}>
+                    <ul>
+                        {this.state.languages.map(lang => { return (<li onClick={currentLang == lang[0] ? null : this._selectLang.bind(this, lang[0])} className={cx({ current: currentLang == lang[0] })} key={lang[1]}>{lang[1]}</li>) })}
+                    </ul>
+                </div >
             </div >
         )
     }
