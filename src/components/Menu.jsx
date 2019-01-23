@@ -6,6 +6,8 @@ var $ = require('jquery')
 var _ = require('underscore')
 require('browsernizr/test/touchevents')
 var Modernizr = require('browsernizr')
+var MobileDetect = require('mobile-detect')
+var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
 
 var Link = require('./Link')
 var MenuData = require('../data').menu
@@ -38,7 +40,8 @@ module.exports = React.createClass({
         return {
             isEnable: false,
             isOpen: false,
-            items: MenuData.map(item => _.clone(item))
+            items: MenuData.map(item => _.clone(item)),
+            languages: [['', '日本語'], ['en', 'English'], ['zh', '繁體中文']],
         }
     },
 
@@ -62,6 +65,13 @@ module.exports = React.createClass({
         }
     },
 
+    _selectLang(lang) {
+        var m = this.getPath().match(/^(\/[a-z]{2})?(\/.*)/)
+        var path = m[2]
+        var next = location.origin + (lang ? '/' + lang + path : path)
+        location.href = next
+    },
+
     componentDidMount() {
         $(window).on('scroll', this._onScroll).on('click', this._onClick)
     },
@@ -75,6 +85,8 @@ module.exports = React.createClass({
     },
 
     render() {
+        var m = this.getPath().match(/^\/([a-z]{2})\//)
+        var currentLang = m ? m[1] : ''
         return (
             <div>
                 <div id="floating-menu" className={cx({ close: !this.state.isOpen })}>
@@ -95,6 +107,11 @@ module.exports = React.createClass({
                             )
                         })}
                     </div>
+                    {isMobile ? <div className="language-selector">
+                        <ul>
+                            {this.state.languages.map(lang => { return (<li onClick={currentLang == lang[0] ? null : this._selectLang.bind(this, lang[0])} className={cx({ current: currentLang == lang[0] })} key={lang[1]}>{lang[1]}</li>) })}
+                        </ul>
+                    </div> : null}
                 </div>
                 <MenuButton isEnable={this.state.isEnable} isOpen={this.state.isOpen} onClick={this._toggleMenu} />
             </div>

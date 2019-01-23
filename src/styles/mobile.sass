@@ -1,9 +1,12 @@
+// #container
+//   opacity: 0.1
+  
 body
   padding: 15px 25px 100px
   font-size: 14px
   -webkit-text-size-adjust: 100%
   letter-spacing: 0.022em
-  // background: url(/assets/_/sp/about-en.png) top left / 320px auto no-repeat
+  // background: url(/assets/_/sp/menu.png) top left / 320px auto no-repeat
 
 hr.line
   margin: 15px 0
@@ -29,11 +32,14 @@ hr.line
 
 #floating-menu
   height: auto
+  display: block
+  > div
+    display: block
   > div a
     display: block
     height: 61px
     margin: 0 15px
-    padding-top: 19px
+    padding-top: 20px
     padding-right: 13px
     font-size: 14px
     background-image: url(/assets/line.png)
@@ -46,6 +52,18 @@ hr.line
       transform: translate(-1px,-6px)
     &:last-child
       background: none
+  .language-selector
+    border-top: 1px solid #ccc
+    ul
+      list-style: none
+      font-size: 11px
+      margin: 0
+      padding: 22px 0
+      li
+        display: inline-block
+        margin: 0 9px
+        &.current
+          color: #a6a6a6
 
 #menu-button
   right: 5px
