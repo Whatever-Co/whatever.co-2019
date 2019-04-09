@@ -1,14 +1,25 @@
 .statement
     width: 960px
     margin: auto
+    margin-top: -50px
     text-align: center
     img
         display: block
-    .logo
-        width: 868px
-        margin: 168px auto 171px
+    #showreel
+        background-color: #000
+        width: 1280px
+        height: 720px
+        margin-left: -160px
+        position: relative
+        cursor: pointer
+        img
+            position: absolute
+            width: 1280px
+            height: 720px
+            top: 0
+            left: 0
     .logo3
-        margin: 0 auto 140px
+        margin: 96px auto 140px
         font-size: 15.3px
         line-height: 2.4em
         p
@@ -28,3 +39,14 @@
         margin-bottom: 55px
         td
             padding: 0 11px 2px 0
+    #showreel-overlay
+        display: flex
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.9)
+        align-items: center
+        justify-content: center
+        z-index: 3000

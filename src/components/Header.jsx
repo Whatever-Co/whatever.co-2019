@@ -3,6 +3,8 @@ var cx = React.addons.classSet
 var Router = require('react-router')
 var { State, Navigation } = Router
 var _ = require('underscore')
+var MobileDetect = require('mobile-detect')
+var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
 
 var Link = require('./Link')
 var MenuData = require('../data').menu
@@ -63,12 +65,12 @@ module.exports = React.createClass({
     },
 
     render() {
-        var showLogo = !this.getPath().match(/^\/([a-z]{2}\/)?$/)
+        var showHeader = !isMobile || !this.getPath().match(/^\/([a-z]{2}\/)?$/)
         var m = this.getPath().match(/^\/([a-z]{2})\//)
         var currentLang = m ? m[1] : ''
-        return (
+        return (showHeader ? 
             <div id="header">
-                <div id="logo" style={({ visibility: showLogo ? "visible" : "hidden" })}>
+                <div id="logo">
                     <Link to="/"><img src="/assets/logo.svg" /></Link>
                 </div>
                 <ul id="menu">
@@ -89,6 +91,6 @@ module.exports = React.createClass({
                     </ul>
                 </div >
             </div >
-        )
+        : null)
     }
 })

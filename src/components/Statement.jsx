@@ -39,15 +39,73 @@ module.exports = React.createClass({
     },
 
     getInitialState() {
-        return this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
+        var state = this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
+        state.showreel = false
+        return state
+    },
+
+    componentDidMount() {
+        this.refs.showreel.getDOMNode().addEventListener('click', this._onClickWatchReel)
+        if (isMobile) {
+            window.addEventListener('resize', this._adjustReelAreaSize)
+            this._adjustReelAreaSize()
+        }
+    },
+
+    componentWillUnmount() {
+        this.refs.showreel.getDOMNode().removeEventListener('click', this._onClickWatchReel)
+        if (isMobile) {
+            window.removeEventListener('resize', this._adjustReelAreaSize)
+            this._adjustReelAreaSize()
+        }
+    },
+
+    _onClickWatchReel() {
+        if (isMobile) {
+            window.open('https://www.youtube.com/watch?v=yVS4w0FkmT4')
+        } else {
+            this.setState({showreel: true})
+            this.refs.overlay.getDOMNode().addEventListener('click', this._onClickReelOverlay)
+            window.addEventListener('resize', this._onResize)
+            this._onResize()
+        }
+    },
+
+    _onClickReelOverlay() {
+        this.setState({showreel: false})
+    },
+
+    _onResize() {
+        var overlay = this.refs.overlay.getDOMNode()
+        var iframe = overlay.querySelector('iframe')
+        if (overlay.clientWidth / overlay.clientHeight < 16 / 9) {
+            iframe.style.width = `${window.innerWidth}px`
+            iframe.style.height = `${window.innerWidth / 16 * 9}px`
+        } else {
+            iframe.style.width = `${window.innerHeight / 9 * 16}px`
+            iframe.style.height = `${window.innerHeight}px`
+        }
+    },
+
+    _adjustReelAreaSize() {
+        var container = this.refs.showreel.getDOMNode()
+        var w = container.clientWidth
+        var h = container.clientHeight
+        var video = this.refs.showreelvideo.getDOMNode()
+        video.style.marginLeft = `${(w - h) / 2}px`
+        var button = this.refs.showreelbutton.getDOMNode()
+        button.style.marginLeft = `${(w - h * (1280 / 720)) / 2}px`
     },
 
     render() {
         return <div className="statement">
-            <img className="logo" src="/assets/logo.gif" alt="Whatever Inc." />
+            <div id="showreel" ref="showreel">
+                {isMobile ? <img src="/assets/reel-preview.gif" ref="showreelvideo"/> : <video playsinline autoPlay muted loop src="/assets/reel-preview.mp4" ref="showreelvideo"></video> }
+                <img src="/assets/showreel-button.png" ref="showreelbutton"></img>
+            </div>
             {isMobile ? <div className="logo3">
-                <p dangerouslySetInnerHTML={{ __html: this.state.text_sp }}></p>
                 <img src="/assets/logo3-sp.svg" alt="" />
+                <p dangerouslySetInnerHTML={{ __html: this.state.text_sp }}></p>
             </div> : <div className="logo3"><img src="/assets/logo3.svg" alt="" /><p dangerouslySetInnerHTML={{ __html: this.state.text_pc }}></p></div>}
             <img className="text" src={isMobile ? this.state.image_sp : this.state.image_pc} alt={this.state.alt} />
             <table>
@@ -64,6 +122,9 @@ module.exports = React.createClass({
                     <td>{this.state.names[2]}</td>
                 </tr>
             </table>
+            { this.state.showreel ? <div id="showreel-overlay" ref="overlay">
+                <iframe src="https://www.youtube.com/embed/yVS4w0FkmT4?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> : null }
         </div>
     }
 })
