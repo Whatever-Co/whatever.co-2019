@@ -17,18 +17,21 @@ module.exports = React.createClass({
                 {
                     name: "TOKYO",
                     address: "2F, HOLSTER, TOC-2nd Building, 1-17-1 Shibuya, Shibuya-ku, Tokyo,  150-0002, Japan",
+                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
                 {
                     name: "NEW YORK",
                     address: "347 W 36th St, #902 New York, NY 10018 U.S.A.",
+                    maplink: "https://goo.gl/maps/x7zKNoj7ixG2",
                     phone: "+1-347-801-7789",
                     president: "Masashi Kawamura / Qanta Shimizu (<a href='https://bassdrum.org/' target='_blank'>BASSDRUM</a>)",
                 },
                 {
                     name: "TAIPEI",
                     address: "4F, 30-2, Beiping East Road, Zhongzheng District, Taipei City, Taiwan",
+                    maplink: "https://goo.gl/maps/5FNdpTdqk8L2",
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
                 },
@@ -42,18 +45,21 @@ module.exports = React.createClass({
                 {
                     name: "TOKYO",
                     address: "〒150-0002 東京都渋谷区渋谷 1-17-1 TOC 第 2 ビル 2F HOLSTER",
+                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
                     phone: "03-6427-6022",
                     president: "富永 勇亮",
                 },
                 {
                     name: "NEW YORK",
                     address: "347 W 36th St, #902 New York, NY 10018 U.S.A.",
+                    maplink: "https://goo.gl/maps/x7zKNoj7ixG2",
                     phone: "+1-347-801-7789",
                     president: "川村 真司 / 清水 幹太 (<a href='https://bassdrum.org/' target='_blank'>BASSDRUM</a>)",
                 },
                 {
                     name: "TAIPEI",
                     address: "4F, 30-2, Beiping East Road, Zhongzheng District, Taipei City, Taiwan",
+                    maplink: "https://goo.gl/maps/5FNdpTdqk8L2",
                     phone: "+886-908-222-101",
                     president: "室市 栄二",
                 },
@@ -67,18 +73,21 @@ module.exports = React.createClass({
                 {
                     name: "TOKYO",
                     address: "2F, HOLSTER, TOC-2nd Building, 1-17-1 Shibuya, Shibuya-ku, Tokyo,  150-0002, Japan",
+                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
                 {
                     name: "NEW YORK",
                     address: "347 W 36th St, #902 New York, NY 10018 U.S.A.",
+                    maplink: "https://goo.gl/maps/x7zKNoj7ixG2",
                     phone: "+1-347-801-7789",
                     president: "Masashi Kawamura / Qanta Shimizu (<a href='https://bassdrum.org/' target='_blank'>BASSDRUM</a>)",
                 },
                 {
                     name: "台北",
                     address: "台北市北平東路 30-2 號 4 樓",
+                    maplink: "https://goo.gl/maps/5FNdpTdqk8L2",
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
                 },
@@ -115,7 +124,7 @@ module.exports = React.createClass({
                     <table>
                         <tr>
                             <th>{this.state.items[0]}</th>
-                            <td>{company.address}</td>
+                            <td>{company.address} (<a href={company.maplink}>MAP</a>)</td>
                         </tr>
                         <tr>
                             <th>{this.state.items[1]}</th>
