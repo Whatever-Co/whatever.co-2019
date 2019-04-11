@@ -64,5 +64,8 @@
   "engines": {
     "node": "4.4.3",
     "npm": "2.15.1"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.4"
   }
 }

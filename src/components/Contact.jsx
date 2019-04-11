@@ -1,6 +1,7 @@
 var React = require('react');
 var MobileDetect = require('mobile-detect')
 var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var ClipboardJS = require('clipboard')
 
 var Lang = require('./Lang')
 
@@ -98,6 +99,13 @@ module.exports = React.createClass({
     getInitialState() {
         return this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
     },
+    
+    componentDidMount() {
+        var clipboard = new ClipboardJS('.copy-button');
+        clipboard.on('success', e => {
+            alert("Copied!")
+        });
+    },
 
     render() {
         return <div className="contact">
@@ -124,11 +132,11 @@ module.exports = React.createClass({
                     <table>
                         <tr>
                             <th>{this.state.items[0]}</th>
-                            <td>{company.address} (<a href={company.maplink}>MAP</a>)</td>
+                            <td><span className="copy-button" data-clipboard-text={company.address}>{company.address}</span> (<a href={company.maplink}>MAP</a>)</td>
                         </tr>
                         <tr>
                             <th>{this.state.items[1]}</th>
-                            <td>{company.phone}</td>
+                            <td><a href={"tel:" + company.phone}>{company.phone}</a></td>
                         </tr>
                         <tr>
                             <th>{this.state.items[2]}</th>
