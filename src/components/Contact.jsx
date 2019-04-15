@@ -132,7 +132,7 @@ module.exports = React.createClass({
                     <table>
                         <tr>
                             <th>{this.state.items[0]}</th>
-                            <td><span className="copy-button" data-clipboard-text={company.address}>{company.address}</span> (<a href={company.maplink}>MAP</a>)</td>
+                            <td><span className="copy-button" data-clipboard-text={company.address}>{company.address}</span> (<a href={company.maplink} target="_blank">MAP</a>)</td>
                         </tr>
                         <tr>
                             <th>{this.state.items[1]}</th>
