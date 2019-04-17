@@ -19,7 +19,6 @@
     "coffeescript": "^1.12.7",
     "compression": "^1.7.1",
     "express": "^4.16.2",
-    "gl-matrix": "^2.4.0",
     "google-maps": "^3.2.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.4",
@@ -45,8 +44,6 @@
     "react-router": "~0.11.4",
     "reactify": "~0.17.1",
     "request": "^2.83.0",
-    "snapsvg": "^0.4.0",
-    "three": "~0.69.0",
     "tween.js": "^16.6.0",
     "underscore": "^1.8.3"
   },
