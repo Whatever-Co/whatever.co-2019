@@ -92,7 +92,7 @@ module.exports = React.createClass({
         var w = container.clientWidth
         var h = container.clientHeight
         var video = this.refs.showreelvideo.getDOMNode().querySelector('video')
-        video.style.marginLeft = `${(w - h) / 2}px`
+        video.style.marginLeft = `${(w - h * (1280 / 720)) / 2}px`
         var button = this.refs.showreelbutton.getDOMNode()
         button.style.marginLeft = `${(w - h * (1280 / 720)) / 2}px`
     },
@@ -101,7 +101,7 @@ module.exports = React.createClass({
         return <div className="statement">
             <div id="showreel" ref="showreel">
                 <div ref="showreelvideo" dangerouslySetInnerHTML={{ __html: `
-                    <video muted autoPlay playsinline loop src="${ isMobile ? "/assets/reel-preview-sp.mp4" : "/assets/reel-preview.mp4"}" />
+                    <video muted autoPlay playsinline loop src="${ isMobile ? "/assets/reel-preview.mp4" : "/assets/reel-preview.mp4"}" />
                 ` }} />
                 <img src="/assets/showreel-button.png" ref="showreelbutton"></img>
             </div>
