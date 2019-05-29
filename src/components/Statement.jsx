@@ -10,8 +10,8 @@ module.exports = React.createClass({
 
     data: {
         en: {
-            text_pc: 'Creative agency PARTY New York and PARTY Taipei, <br />are merging with Japan’s renowned digital production company dot by dot<br />to start a new global studio “Whatever”.',
-            text_sp: 'Creative agency PARTY New York and PARTY Taipei, <br />are merging with Japan’s renowned<br />digital production company dot by dot<br />to start a new global studio “Whatever”.',
+            text_pc: 'Creative agencies PARTY New York and PARTY Taipei<br />have merged with Japan’s renowned digital production company dot by dot<br />to form a new global studio.',
+            text_sp: 'Creative agencies PARTY New York and PARTY Taipei<br />have merged with Japan’s renowned<br />digital production company dot by dot<br />to form a new global studio.',
             image_pc: '/assets/statement-en.svg',
             image_sp: '/assets/statement-en-sp.svg',
             alt: '“PARTY (New York & Taipei)” is a creative agency that loves to make weird and wonderful things with their own hands. “dot by dot” is a digital production company that loves to create new ideas and strategies using their own brains.  Descriptions aside, the two teams share one similarity: Before anything else, we are creatives who “think and make”, because we believe that\'s the only way to bring dreamlike ideas to life.Many agencies and production companies around the world share the same mission of "thinking and making", but only few have walked the talk.Our challenge is to prove to the world that we can make whatever we imagine through our Tokyo, New York, Berlin, and Taipei teams.',
