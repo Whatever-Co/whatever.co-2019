@@ -7,7 +7,7 @@ var DocumentTitle = require('react-document-title')
 var $ = require('jquery')
 var _ = require('underscore')
 var MobileDetect = require('mobile-detect')
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 
 var Lang = require('./Lang')
 
@@ -32,19 +32,26 @@ var Member = React.createClass({
 
     _onResize() {
         var w = window.innerWidth
-        var h = w
-        $(this.refs.portrait.getDOMNode()).css('background-size', `${w}px ${h}px`)
-        $(this.refs.inner.getDOMNode()).css({
-            'padding-top': h - 13,
-            'background-size': `${w}px ${h}px`
-        })
+        if (w<768) {
+            var h = w
+            $(this.refs.portrait.getDOMNode()).css('background-size', `${w}px ${h}px`)
+            $(this.refs.inner.getDOMNode()).css({
+                'padding-top': h - 13,
+                'background-size': `${w}px ${h}px`
+            })
+        }
+        else
+        {
+            $(this.refs.portrait.getDOMNode()).css('background-size', '')
+            $(this.refs.inner.getDOMNode()).css({'padding-top': '','background-size': ''})
+        }
     },
 
     componentDidMount() {
-        if (isMobile) {
+        //if (isMobile) {
             $(window).on('resize', this._onResize)
             this._onResize()
-        }
+        //}
         $('a', this.refs.body.getDOMNode()).on('click', this._onClickLink)
     },
 

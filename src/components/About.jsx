@@ -1,6 +1,6 @@
 var React = require('react')
 var MobileDetect = require('mobile-detect')
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 
 var Lang = require('./Lang')
 

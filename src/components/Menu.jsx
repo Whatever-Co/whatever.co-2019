@@ -7,7 +7,7 @@ var _ = require('underscore')
 require('browsernizr/test/touchevents')
 var Modernizr = require('browsernizr')
 var MobileDetect = require('mobile-detect')
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 
 var Link = require('./Link')
 var MenuData = require('../data').menu

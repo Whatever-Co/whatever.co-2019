@@ -4,7 +4,7 @@ var {State} = Router;
 var DocumentTitle = require('react-document-title');
 var $ = require('jquery');
 var MobileDetect = require('mobile-detect');
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile();
+var isMobile = !!new MobileDetect(navigator.userAgent).phone();
 
 var Entry = require('./Entry');
 var NotFound = require('./NotFound');
