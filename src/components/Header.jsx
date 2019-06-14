@@ -4,7 +4,7 @@ var Router = require('react-router')
 var { State, Navigation } = Router
 var _ = require('underscore')
 var MobileDetect = require('mobile-detect')
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 
 var Link = require('./Link')
 var MenuData = require('../data').menu

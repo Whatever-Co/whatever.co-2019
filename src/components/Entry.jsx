@@ -4,7 +4,7 @@ var Router = require('react-router')
 var { Navigation } = Router
 var $ = require('jquery')
 var MobileDetect = require('mobile-detect')
-var isMobile = !!new MobileDetect(navigator.userAgent).mobile()
+var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 var moment = require('moment')
 moment.locale('en')
 var Baby = require('babyparse')
