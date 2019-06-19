@@ -1,5 +1,8 @@
+dist: xenial
 language: node_js
 node_js:
   - "10"
+before_install:
+  - gem install sass
 script:
   - npm start build
