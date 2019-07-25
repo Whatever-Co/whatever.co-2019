@@ -17,8 +17,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "2F, HOLSTER, TOC-2nd Building, 1-17-1 Shibuya, Shibuya-ku, Tokyo,  150-0002, Japan",
-                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
+                    address: "7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
+                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
@@ -45,8 +45,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "〒150-0002 東京都渋谷区渋谷 1-17-1 TOC 第 2 ビル 2F HOLSTER",
-                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
+                    address: "〒106-0032 東京都港区六本木 7 丁目 2 番 8 号",
+                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
                     phone: "03-6427-6022",
                     president: "富永 勇亮",
                 },
@@ -73,8 +73,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "2F, HOLSTER, TOC-2nd Building, 1-17-1 Shibuya, Shibuya-ku, Tokyo,  150-0002, Japan",
-                    maplink: "https://goo.gl/maps/HwCDpFmcFB72",
+                    address: "7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
+                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
