@@ -36,6 +36,11 @@ module.exports = React.createClass({
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
                 },
+                {
+                    name: "BERLIN",
+                    address: "Friedrichstraße 68, 10117 Berlin, Germany",
+                    maplink: "https://goo.gl/maps/JJ9c4hEupRFWHB5X6",
+                },
             ]
         },
         ja: {
@@ -63,6 +68,11 @@ module.exports = React.createClass({
                     maplink: "https://goo.gl/maps/5FNdpTdqk8L2",
                     phone: "+886-908-222-101",
                     president: "室市 栄二",
+                },
+                {
+                    name: "BERLIN",
+                    address: "Friedrichstraße 68, 10117 Berlin, Germany",
+                    maplink: "https://goo.gl/maps/JJ9c4hEupRFWHB5X6",
                 },
             ]
         },
@@ -92,6 +102,11 @@ module.exports = React.createClass({
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
                 },
+                {
+                    name: "BERLIN",
+                    address: "Friedrichstraße 68, 10117 Berlin, Germany",
+                    maplink: "https://goo.gl/maps/JJ9c4hEupRFWHB5X6",
+                },
             ]
         },
     },
@@ -99,7 +114,7 @@ module.exports = React.createClass({
     getInitialState() {
         return this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
     },
-    
+
     componentDidMount() {
         var clipboard = new ClipboardJS('.copy-button');
         clipboard.on('success', e => {
@@ -126,7 +141,7 @@ module.exports = React.createClass({
                         </div>
                     </div>
                 </div>}
-            {this.state.companies.map(company => {
+            {this.state.companies.map((company, indek) => {
                 return <div className="region">
                     <div className="name">{company.name}</div>
                     <table>
@@ -134,26 +149,17 @@ module.exports = React.createClass({
                             <th>{this.state.items[0]}</th>
                             <td><span className="copy-button" data-clipboard-text={company.address}>{company.address}</span> (<a href={company.maplink} target="_blank">MAP</a>)</td>
                         </tr>
-                        <tr>
+                        {company.phone ? <tr>
                             <th>{this.state.items[1]}</th>
                             <td><a href={"tel:" + company.phone}>{company.phone}</a></td>
-                        </tr>
-                        <tr>
+                        </tr> : null}
+                        {company.president ? <tr>
                             <th>{this.state.items[2]}</th>
                             <td dangerouslySetInnerHTML={{ __html: company.president }}></td>
-                        </tr>
+                        </tr> : null}
                     </table>
                 </div>
             })}
-            <div className="region">
-                <div className="name">BERLIN</div>
-                <table>
-                    <tr>
-                        <td>{this.state.items[3]}</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
         </div>
     }
 
