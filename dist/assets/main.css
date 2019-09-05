@@ -598,9 +598,55 @@ hr.line {
       cursor: pointer; }
 
 .about .about-text {
-  width: 768px;
-  max-width: 100%;
+  width: 960px;
   margin: 50px 0 50px; }
+.about .about-poem {
+  width: 892px;
+  margin-top: 32px; }
+.about .about-chiefs {
+  margin-top: 154px;
+  margin-bottom: 154px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+.about .about-chief {
+  display: block;
+  text-align: center;
+  border: none; }
+  .about .about-chief > img {
+    width: 270px;
+    margin-bottom: 15px; }
+.about .about-chief-title {
+  font-weight: bold;
+  margin-bottom: 2px; }
+.about .about-chief-name-ja {
+  font-size: 25px;
+  margin-bottom: -3px; }
+.about .about-chief-name-en {
+  font-size: 13px; }
+.about .about-partner-title {
+  text-align: center;
+  font-size: 32px;
+  display: block;
+  height: 21px;
+  margin: 0 auto 40px; }
+.about .about-partners {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .about .about-partners > div {
+    width: 440px;
+    margin-bottom: 52px; }
+    .about .about-partners > div a {
+      border: none;
+      background-image: none; }
+    .about .about-partners > div img {
+      width: 440px;
+      margin: 28px 0; }
 
 .work-list hr {
   height: 1px;
