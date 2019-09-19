@@ -14,11 +14,11 @@ module.exports = React.createClass({
             poem_pc: '/assets/poem-en.svg',
             poem_sp: '/assets/poem-en-sp.svg',
             poem_alt: 'Whatever is a creative studio that aims to conceive unexplored ideas, and bring them to life by whatever means possible. Based in Tokyo, New York, Taipei, and Berlin, our multidisciplinary team allows us to produce innovative work in various creative fields such as advertising and brand design, to content productions such as TV  shows, products, and service designs. By “thinking and making” under one roof, we strive to create beautiful experiences that can be talked and endeared by the people around the world.',
-            cotodama: 'The developer of Lyric Speaker digital canvas and its license provider under a joint venture agreement; also a partial investor of a joint contribution with SIX, WOW and THE GUILD on the project. Not to mention its role on providing management and technical aids. ',
-            bassdrum: 'BASSDRUM is the first global Technical Director Community composed of top technical directors in Japan like Quanta Shimizu. The company is equipped with the resources and understanding to provide technical, financial and management direction.',
-            yummysake: 'Assisting users to gain the knowledge for their preferences in Sake through Machine Learning x Blind Tasting. Being investor and offering technical and management support to the project.  ',
-            kasa: 'Kasa is a creative unit developed to provide interactive experience for museum and public spaces. Established in New York alongside Kudos and Conduit.',
-            wtfc: '',
+            cotodama: 'A joint venture to develop and license Lyric Speaker, co-funded with SIX, WOW and THE GUILD. Whatever also provides technical and management support.',
+            bassdrum: 'The world’s first Technical Directors collective formed by Qanta Shimizu together with the industry-leading Technical Directors in Japan. Financial and management support provided by Whatever.',
+            yummysake: 'Yummy Sake is the unique tasting service to analyze customer\'s sake preference using blind tasting and machine learning. Financial and technical support provided by Whatever.',
+            kasa: 'Kasa is a creative unit specialized in developing interactive experiences for museums and public spaces. Co-founded with Kudos and Conduit in New York.',
+            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "Wherever."',
         },
         ja: {
             poem_pc: '/assets/poem-ja.svg',
@@ -28,7 +28,7 @@ module.exports = React.createClass({
             bassdrum: '清水幹太をはじめ、日本をリードするテクニカルディレクターが集まった世界初のテクニカルディレクター集団。出資、及び役員を派遣。',
             yummysake: '機械学習 x ブラインドテイスティングで好みの日本酒がわかるサービス。出資、及び技術者を派遣。',
             kasa: 'ミュージアムや公共空間のためのインタラクティブ体験を企画・開発するクリエイティブ・ユニット。Kudos、Conduit と共同で NY に設立。',
-            wtfc: 'WWWWTFC!',
+            wtfc: '東北新社との共同出資による合弁会社。コワーキングスペース「Wherever」の共同運営及び新規事業開発とグローバルでのクリエイティブサービス等を展開。出資、及び役員を派遣。',
         },
         zh: {
             poem_pc: '/assets/poem-zh.svg',
@@ -38,7 +38,7 @@ module.exports = React.createClass({
             bassdrum: '由 Qanta Shimizu 等引領日本業績 technical director 組成。是全世界第一個 technical director 匯集組織。提供出資以及指派經營管理者。',
             yummysake: '透過 Machine Learning x Blind Tasting 辨識使用者日本酒偏好的服務。提供出資以及指派經營管理者。',
             kasa: '特別為博物館和及公共空間提供互動體驗的企劃與開發的創意團隊。與 Kudos 及 Conduit 一同設立於 NY。',
-            wtfc: '',
+            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "Wherever."',
         },
     },
 
@@ -91,7 +91,9 @@ module.exports = React.createClass({
                     <div>{this.state.yummysake}</div>
                 </div>
                 <div>
-                    <img src="/assets/kasa.png" alt="kasa" />
+                    <a href="https://kasa-made.com/">
+                        <img src="/assets/kasa.png" alt="kasa" />
+                    </a>
                     <div>{this.state.kasa}</div>
                 </div>
                 <div>
