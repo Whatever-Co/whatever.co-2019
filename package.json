@@ -7,6 +7,8 @@
   "homepage": "https://whatever.co/",
   "scripts": {
     "start": "grunt",
+    "build": "grunt build",
+    "deploy": "grunt deploy",
     "serve": "coffee run.coffee"
   },
   "devDependencies": {
