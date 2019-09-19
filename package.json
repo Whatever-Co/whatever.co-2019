@@ -61,7 +61,7 @@
     "./src/components/Dots/Detector.js": "Detector"
   },
   "engines": {
-    "node": "4.4.3",
+    "node": "4.9.1",
     "npm": "2.15.1"
   },
   "dependencies": {
