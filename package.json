@@ -33,7 +33,7 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-express": "1.4.1",
     "grunt-parallel": "0.5.1",
-    "grunt-rsync": "2.0.1",
+    "grunt-rsync": "3.0.0",
     "jquery": "3.4.1",
     "jquery.transit": "0.9.12",
     "mobile-detect": "1.4.3",
