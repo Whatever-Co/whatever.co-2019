@@ -38,7 +38,7 @@
     "jquery.transit": "0.9.12",
     "mobile-detect": "1.4.3",
     "moment": "2.24.0",
-    "ngrok": "2.3.0",
+    "ngrok": "3.2.5",
     "object-assign": "4.1.1",
     "open": "6.4.0",
     "react": "0.12.2",
