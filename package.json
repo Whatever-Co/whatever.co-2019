@@ -30,7 +30,7 @@
     "grunt-contrib-cssmin": "3.0.0",
     "grunt-contrib-sass": "1.0.0",
     "grunt-contrib-uglify": "4.0.1",
-    "grunt-contrib-watch": "0.6.1",
+    "grunt-contrib-watch": "1.1.0",
     "grunt-express": "1.4.1",
     "grunt-parallel": "0.5.1",
     "grunt-rsync": "2.0.1",
