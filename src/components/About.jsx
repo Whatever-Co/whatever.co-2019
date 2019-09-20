@@ -38,7 +38,7 @@ module.exports = React.createClass({
             bassdrum: '由 Qanta Shimizu 等引領日本業績 technical director 組成。是全世界第一個 technical director 匯集組織。提供出資以及指派經營管理者。',
             yummysake: '透過 Machine Learning x Blind Tasting 辨識使用者日本酒偏好的服務。提供出資以及指派經營管理者。',
             kasa: '特別為博物館和及公共空間提供互動體驗的企劃與開發的創意團隊。與 Kudos 及 Conduit 一同設立於 NY。',
-            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "Wherever."',
+            wtfc: '這是我們與東北新社共同出資的合資公司。 ​​一同經營 co-working space「Wherever」的營運，同時拓展新事業開發和提供全球化的創意設計服務，其中營運模式包含出資以及指派經營管理者。"',
         },
     },
 
