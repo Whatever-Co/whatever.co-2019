@@ -36,7 +36,7 @@
     "grunt-rsync": "2.0.1",
     "jquery": "3.4.1",
     "jquery.transit": "0.9.12",
-    "mobile-detect": "1.4.3",
+    "mobile-detect": "1.4.4",
     "moment": "2.24.0",
     "ngrok": "2.3.0",
     "object-assign": "4.1.1",
