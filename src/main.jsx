@@ -17,6 +17,7 @@ var Page = require('./components/Page')
 var Single = require('./components/Single')
 var Statement = require('./components/Statement')
 var WorkList = require('./components/WorkList')
+var NewsList = require('./components/NewsList')
 
 var FaviconAnimator = require('./FaviconAnimator')
 
@@ -96,6 +97,7 @@ var routes = (
         <Route name="WorkList" path="work/" handler={WorkList}>
             <Route name="WorkListSelected" path=":tag/" handler={Dummy} />
         </Route>
+        <Route name="News" path="news/" handler={NewsList} />
         <Route name="Contact" path="contact/" handler={Contact} />
 
         <Route name="Category" path="category/:category/" handler={EntryList} />
