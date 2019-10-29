@@ -3,6 +3,8 @@ var Router = require('react-router')
 var { State, Navigation } = Router
 var DocumentTitle = require('react-document-title')
 var $ = require('jquery')
+var MobileDetect = require('mobile-detect');
+var isMobile = !!new MobileDetect(navigator.userAgent).mobile();
 var moment = require('moment')
 moment.locale('en')
 
@@ -54,6 +56,24 @@ module.exports = React.createClass({
     render() {
         var title = this.state.title ? `${this.state.title} ● Whatever Inc.` : 'Whatever Inc.'
         var work = this.state.work.map(work => <WorkItem key={work.guid} {...work} />)
+        var news = this.state.news.map((news) => {
+            var date = moment(news.date).format('LL');
+            if (isMobile) {
+                return (
+                    <tr key={news.guid} onClick={this._onClickItem.bind(this, news.slug)}>
+                        <td dangerouslySetInnerHTML={{ __html: news.title }} />
+                        <th>{date}</th>
+                    </tr>
+                );
+            } else {
+                return (
+                    <tr key={news.guid} onClick={this._onClickItem.bind(this, news.slug)}>
+                        <th>{date}</th>
+                        <td dangerouslySetInnerHTML={{ __html: news.title }} />
+                    </tr>
+                );
+            }
+        });
         return (
             <DocumentTitle title={title}>
                 <div className="member-detail">
@@ -61,6 +81,12 @@ module.exports = React.createClass({
                         <div>
                             <h2>WORK</h2>
                             <div className="works-list clearfix">{work}</div>
+                        </div>
+                    ) : ''}
+                    {news.length ? (
+                        <div>
+                            <h2>NEWS</h2>
+                            <table className="news-list"><tbody>{news}</tbody></table>
                         </div>
                     ) : ''}
                 </div>
