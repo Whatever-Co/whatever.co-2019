@@ -35,8 +35,9 @@ module.exports = React.createClass({
             <div id="footer">
                 <img className="copyright" src="/assets/copyright.png" />
                 <div className="buttons">
-                    <button className="facebook" />
-                    <button className="twitter" />
+                    <a className="instagram" href="https://www.instagram.com/whtevr_co/" target="_blank" />
+                    <a className="facebook" href="https://www.facebook.com/whtevr.co/" target="_blank" />
+                    <a className="twitter" href="https://twitter.com/whtevr_co" target="_blank" />
                     <button className="top" onClick={this._onClickTop} />
                 </div>
             </div>
