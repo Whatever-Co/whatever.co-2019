@@ -59,7 +59,7 @@ module.exports = React.createClass({
                 </Link>
                 <Link className="about-chief" to="/team/masa/">
                     <img src="https://whatever.co/wp-content/uploads/2019/06/masa-2.jpg" />
-                    <div className="about-chief-title">Creative Director / COO</div>
+                    <div className="about-chief-title">Creative Director / CCO</div>
                     <div className="about-chief-name-ja">川村 真司</div>
                     <div className="about-chief-name-en">Masashi Kawamura</div>
                 </Link>
