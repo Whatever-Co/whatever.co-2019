@@ -56,6 +56,7 @@ var routes = (
             <Route path="work/" handler={WorkList}>
                 <Route path=":tag/" handler={Dummy} />
             </Route>
+            <Route path="news/" handler={NewsList} />
             <Route path="contact/" handler={Contact} />
 
             <Route path="category/:category/" handler={EntryList} />
@@ -78,6 +79,7 @@ var routes = (
             <Route path="work/" handler={WorkList}>
                 <Route path=":tag/" handler={Dummy} />
             </Route>
+            <Route path="news/" handler={NewsList} />
             <Route path="contact/" handler={Contact} />
 
             <Route path="category/:category/" handler={EntryList} />
