@@ -22,6 +22,8 @@ module.exports = React.createClass({
         var href = $(e.currentTarget).attr('href')
         if (href.match(/^\w+:/i)) {
             window.open(href)
+        } if (href.match(/^\/\w{2}\//)) {
+            location.href = href
         } else {
             if (this.context.langPrefix && href.indexOf(this.context.langPrefix) != 0) {
                 href = this.context.langPrefix + href
@@ -171,6 +173,10 @@ module.exports = React.createClass({
         return null
     },
 
+    _replaceJSONLink(content) {
+        return content.replace(/https:\/\/whatever.co(\/\w{2}\/)wp-json\/posts\?filter%5Bname%5D=([\w-_]+)[^"]+/gm, '$1post/$2/')
+    },
+
     render() {
         var entry = this.props.entry
         var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
@@ -182,7 +188,7 @@ module.exports = React.createClass({
                     <h1 className="title" dangerouslySetInnerHTML={{ __html: entry.title }} />
                     <span className="date"><Link to={`/post/${entry.slug}/`}>{moment(entry.date_gmt).format('LL')}</Link></span>
                     <div className="body" ref="body">
-                        <div dangerouslySetInnerHTML={{ __html: entry.content }} />
+                        <div dangerouslySetInnerHTML={{ __html: this._replaceJSONLink(entry.content) }} />
                         {entry.terms.category[0].slug == 'work' ? (
                             <table>
                                 <tbody>
