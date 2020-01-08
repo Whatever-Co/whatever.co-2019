@@ -17,8 +17,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
-                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
+                    address: "WHEREVER 7F, 7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
+                    maplink: "https://g.page/whatever-inc",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
@@ -50,8 +50,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "〒106-0032 東京都港区六本木 7 丁目 2 番 8 号",
-                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
+                    address: "〒106-0032 東京都港区六本木 7 丁目 2 番 8 号 WHEREVER 7F",
+                    maplink: "https://g.page/whatever-inc",
                     phone: "03-6427-6022",
                     president: "富永 勇亮",
                 },
@@ -83,8 +83,8 @@ module.exports = React.createClass({
             companies: [
                 {
                     name: "TOKYO",
-                    address: "7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
-                    maplink: "https://goo.gl/maps/2Qj5MssgcjGSoVX19",
+                    address: "WHEREVER 7F, 7-2-8 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
+                    maplink: "https://g.page/whatever-inc",
                     phone: "+81-3-6427-6022",
                     president: "Yusuke Tominaga ",
                 },
