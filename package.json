@@ -21,7 +21,7 @@
     "coffeescript": "2.4.1",
     "compression": "1.7.4",
     "express": "4.17.1",
-    "google-maps": "3.3.0",
+    "google-maps": "4.2.3",
     "grunt": "1.0.4",
     "grunt-autoprefixer": "3.0.4",
     "grunt-browserify": "5.3.0",
