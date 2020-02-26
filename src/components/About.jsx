@@ -18,7 +18,7 @@ module.exports = React.createClass({
             bassdrum: 'The world’s first Technical Directors collective formed by Qanta Shimizu together with the industry-leading Technical Directors in Japan. Financial and management support provided by Whatever.',
             yummysake: 'Yummy Sake is the unique tasting service to analyze customer\'s sake preference using blind tasting and machine learning. Financial and technical support provided by Whatever.',
             kasa: 'Kasa is a creative unit specialized in developing interactive experiences for museums and public spaces. Co-founded with Kudos and Conduit in New York.',
-            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "Wherever."',
+            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "WHEREVER."',
         },
         ja: {
             poem_pc: '/assets/poem-ja.svg',
@@ -28,7 +28,7 @@ module.exports = React.createClass({
             bassdrum: '清水幹太をはじめ、日本をリードするテクニカルディレクターが集まった世界初のテクニカルディレクター集団。出資、及び役員を派遣。',
             yummysake: '機械学習 x ブラインドテイスティングで好みの日本酒がわかるサービス。出資、及び技術者を派遣。',
             kasa: 'ミュージアムや公共空間のためのインタラクティブ体験を企画・開発するクリエイティブ・ユニット。Kudos、Conduit と共同で NY に設立。',
-            wtfc: '東北新社との共同出資による合弁会社。コワーキングスペース「Wherever」の共同運営及び新規事業開発とグローバルでのクリエイティブサービス等を展開。出資、及び役員を派遣。',
+            wtfc: '東北新社との共同出資による合弁会社。コワーキングスペース「WHEREVER」の共同運営及び新規事業開発とグローバルでのクリエイティブサービス等を展開。出資、及び役員を派遣。',
         },
         zh: {
             poem_pc: '/assets/poem-zh.svg',
@@ -38,7 +38,7 @@ module.exports = React.createClass({
             bassdrum: '由 Qanta Shimizu 等引領日本業績 technical director 組成。是全世界第一個 technical director 匯集組織。提供出資以及指派經營管理者。',
             yummysake: '透過 Machine Learning x Blind Tasting 辨識使用者日本酒偏好的服務。提供出資以及指派經營管理者。',
             kasa: '特別為博物館和及公共空間提供互動體驗的企劃與開發的創意團隊。與 Kudos 及 Conduit 一同設立於 NY。',
-            wtfc: '這是我們與東北新社共同出資的合資公司。 ​​一同經營 co-working space「Wherever」的營運，同時拓展新事業開發和提供全球化的創意設計服務，其中營運模式包含出資以及指派經營管理者。"',
+            wtfc: '這是我們與東北新社共同出資的合資公司。 ​​一同經營 co-working space「WHEREVER」的營運，同時拓展新事業開發和提供全球化的創意設計服務，其中營運模式包含出資以及指派經營管理者。"',
         },
     },
 
