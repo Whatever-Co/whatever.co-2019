@@ -47,7 +47,7 @@
     "reactify": "0.17.1",
     "request": "2.88.0",
     "tween.js": "16.6.0",
-    "underscore": "1.9.1"
+    "underscore": "1.10.2"
   },
   "repository": {
     "type": "git",
