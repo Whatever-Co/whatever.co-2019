@@ -1,12 +1,16 @@
 var React = require('react')
+var Router = require('react-router');
+var {Navigation} = Router;
+var $ = require('jquery')
 var MobileDetect = require('mobile-detect')
 var isMobile = !!new MobileDetect(navigator.userAgent).phone()
 
 var Lang = require('./Lang')
+var Link = require('./Link')
 
 module.exports = React.createClass({
 
-    mixins: [Lang],
+    mixins: [Lang, Navigation],
 
     data: {
         en: {
@@ -41,7 +45,15 @@ module.exports = React.createClass({
     getInitialState() {
         var state = this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
         state.showreel = false
+        state.work = []
+        state.news = []
         return state
+    },
+
+    getDetail() {
+        $.getJSON('/wp-json/posts', { 'filter[tag]': 'featured', 'filter[posts_per_page]': 3, lang: this.context.lang, _wp_json_nonce: window.nonce }).done((result) => {
+            this.setState({work: result})
+        })
     },
 
     componentDidMount() {
@@ -50,6 +62,7 @@ module.exports = React.createClass({
             window.addEventListener('resize', this._adjustReelAreaSize)
             this._adjustReelAreaSize()
         }
+        this.getDetail();
     },
 
     componentWillUnmount() {
@@ -58,6 +71,10 @@ module.exports = React.createClass({
             window.removeEventListener('resize', this._adjustReelAreaSize)
             this._adjustReelAreaSize()
         }
+    },
+
+    _onClickWork(slug) {
+        this.transitionTo(`${this.context.langPrefix}/post/${slug}/`);
     },
 
     _onClickWatchReel() {
@@ -105,25 +122,22 @@ module.exports = React.createClass({
                 ` }} />
                 <img src="/assets/showreel-button.png" ref="showreelbutton"></img>
             </div>
-            {isMobile ? <div className="logo3">
-                <img src="/assets/logo3-sp.svg" alt="" />
-                <p dangerouslySetInnerHTML={{ __html: this.state.text_sp }}></p>
-            </div> : <div className="logo3"><img src="/assets/logo3.svg" alt="" /><p dangerouslySetInnerHTML={{ __html: this.state.text_pc }}></p></div>}
-            <img className="text" src={isMobile ? this.state.image_sp : this.state.image_pc} alt={this.state.alt} />
-            <table>
-                <tr>
-                    <td>{this.state.titles[0]} :</td>
-                    <td>{this.state.names[0]}</td>
-                </tr>
-                <tr>
-                    <td>{this.state.titles[1]} :</td>
-                    <td>{this.state.names[1]}</td>
-                </tr>
-                <tr>
-                    <td>{this.state.titles[2]} :</td>
-                    <td>{this.state.names[2]}</td>
-                </tr>
-            </table>
+            <img id="makewe" src="/assets/makewhatever.png" />
+            <div id="about"><Link to="/about/">ABOUT</Link></div>
+            <div id="vline"></div>
+            <div id="featured-work">
+                <img src="/assets/featured-work.png" width="251"/>
+                <div className="items">
+                    {this.state.work.map(entry=> {
+                        var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
+                        return <div key={entry.slug} className="work" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
+                            <div className="title">{entry.title}</div>
+                            <img src="/assets/learnmore.png" width="160"></img>
+                        </div>
+                    })}
+                </div>
+                <div id="allwork"><Link to="/work/">ALL WORK</Link></div>
+            </div>
             { this.state.showreel ? <div id="showreel-overlay" ref="overlay">
                 <iframe src="https://www.youtube.com/embed/yVS4w0FkmT4?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <button ref="close"><img src="/assets/close.png"/></button>
