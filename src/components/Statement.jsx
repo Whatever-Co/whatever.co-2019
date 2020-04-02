@@ -4,6 +4,8 @@ var {Navigation} = Router;
 var $ = require('jquery')
 var MobileDetect = require('mobile-detect')
 var isMobile = !!new MobileDetect(navigator.userAgent).phone()
+var moment = require('moment')
+moment.locale('en')
 
 var Lang = require('./Lang')
 var Link = require('./Link')
@@ -50,10 +52,29 @@ module.exports = React.createClass({
         return state
     },
 
-    getDetail() {
-        $.getJSON('/wp-json/posts', { 'filter[tag]': 'featured', 'filter[posts_per_page]': 3, lang: this.context.lang, _wp_json_nonce: window.nonce }).done((result) => {
+    getFeaturedWork() {
+        var data = {
+            'filter[tag]': 'featured',
+            'filter[posts_per_page]': 3,
+            lang: this.context.lang,
+            _wp_json_nonce: window.nonce
+        }
+        $.getJSON('/wp-json/posts', data).done((result) => {
             this.setState({work: result})
         })
+    },
+
+    getLatestNews() {
+        var data = {
+            page: 1,
+            'filter[posts_per_page]': 3,
+            'filter[category_name]': 'news',
+            lang:  this.context.lang,
+            _wp_json_nonce: window.nonce
+        }
+        return $.getJSON('/wp-json/posts', data).done(result => {
+            this.setState({ news: result })
+        });
     },
 
     componentDidMount() {
@@ -62,7 +83,8 @@ module.exports = React.createClass({
             window.addEventListener('resize', this._adjustReelAreaSize)
             this._adjustReelAreaSize()
         }
-        this.getDetail();
+        this.getFeaturedWork()
+        this.getLatestNews()
     },
 
     componentWillUnmount() {
@@ -137,6 +159,20 @@ module.exports = React.createClass({
                     })}
                 </div>
                 <div id="allwork"><Link to="/work/">ALL WORK</Link></div>
+            </div>
+            <div id="news">
+                <img src="/assets/news.png" width="84"/>
+                <div className="items">
+                    {this.state.news.map(entry=> {
+                            var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
+                            var link = `${this.context.langPrefix}/post/${entry.slug}/`
+                            return <div key={entry.slug} className="news" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
+                                <div className="date">{moment(entry.date_gmt).format('LL')}</div>
+                                <div className="title"><Link to={link}>{entry.title}</Link></div>
+                            </div>
+                        })}
+                </div>
+                <div id="allnews"><Link to="/news/">ALL NEWS</Link></div>
             </div>
             { this.state.showreel ? <div id="showreel-overlay" ref="overlay">
                 <iframe src="https://www.youtube.com/embed/yVS4w0FkmT4?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
