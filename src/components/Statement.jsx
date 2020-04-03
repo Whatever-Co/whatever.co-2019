@@ -144,7 +144,7 @@ module.exports = React.createClass({
                 ` }} />
                 <img src="/assets/showreel-button.png" ref="showreelbutton"></img>
             </div>
-            <img id="makewe" src="/assets/makewhatever.png" />
+            <img id="makewe" src={isMobile ? "/assets/makewhatever-sp.png" : "/assets/makewhatever.png"} />
             <div id="about"><Link to="/about/">ABOUT</Link></div>
             <div id="vline"></div>
             <div id="featured-work">
@@ -154,7 +154,7 @@ module.exports = React.createClass({
                         var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
                         return <div key={entry.slug} className="work" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
                             <div className="title">{entry.title}</div>
-                            <img src="/assets/learnmore.png" width="160"></img>
+                            <img src={isMobile ? "/assets/learnmore-sp.png" : "/assets/learnmore.png"} width="160"></img>
                         </div>
                     })}
                 </div>
