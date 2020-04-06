@@ -153,7 +153,7 @@ module.exports = React.createClass({
                     {this.state.work.map(entry=> {
                         var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
                         return <div key={entry.slug} className="work" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
-                            <div className="title">{entry.title}</div>
+                            <div className="title" dangerouslySetInnerHTML={{__html: entry.title}}></div>
                             <img src={isMobile ? "/assets/learnmore-sp.png" : "/assets/learnmore.png"} width="160"></img>
                         </div>
                     })}
@@ -168,7 +168,7 @@ module.exports = React.createClass({
                             var link = `${this.context.langPrefix}/post/${entry.slug}/`
                             return <div key={entry.slug} className="news" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
                                 <div className="date">{moment(entry.date_gmt).format('LL')}</div>
-                                <div className="title"><Link to={link}>{entry.title}</Link></div>
+                                <div className="title"><Link to={link} dangerouslySetInnerHTML={{__html: entry.title}}></Link></div>
                             </div>
                         })}
                 </div>
