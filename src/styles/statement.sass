@@ -3,6 +3,7 @@
     margin: auto
     margin-top: -50px
     text-align: center
+    // opacity: 80%
     img
         display: block
     #showreel
@@ -10,6 +11,7 @@
         width: 1280px
         height: 720px
         margin-left: -160px
+        margin-bottom: 96px
         position: relative
         cursor: pointer
         img
@@ -18,27 +20,85 @@
             height: 720px
             top: 0
             left: 0
-    .logo3
-        margin: 96px auto 140px
-        font-size: 15.3px
-        line-height: 2.4em
-        p
-            padding-left: 12px
-        img
-            width: 50%
-            display: block
-            margin: 0 auto 40px
-    .text
+    img#makewe
+        display: block
         width: 100%
-        margin: 0 auto 140px
-    table
-        text-align: left
-        font-size: 19.5px
-        line-height: 1.95em
-        border-spacing: 0
-        margin-bottom: 55px
-        td
-            padding: 0 11px 2px 0
+        margin-bottom: 30px
+    #about
+        text-align: right
+        a
+            font-size: 18px
+            font-weight: bold
+    #vline
+        border-left: 2px solid black
+        height: 110px
+        width: 0px
+        margin: 0 auto 0 auto
+    #featured-work
+        margin-top: 56px
+        >img
+            margin: auto
+            margin-bottom: 60px
+        .items
+            display: flex
+            justify-content: space-between
+            .work
+                width: 300px
+                height: 320px
+                background-color: #eee
+                background-size: cover
+                background-position: center
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                color: white
+                font-size: 19px
+                font-weight: bold
+                cursor: pointer
+                .title
+                    min-height: 72px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    margin: 14px 0
+                    user-select: none
+        #allwork
+            text-align: right
+            margin-top: 30px
+            a
+                font-size: 18px
+                font-weight: bold
+    #news
+        margin-top: 113px
+        >img
+            margin: auto
+            margin-bottom: 54px
+        .items
+            .news
+                text-align: left
+                margin-bottom: 20px
+                padding-left: 221px
+                height: 86px
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: left
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                cursor: pointer
+                .date
+                    font: normal 300 15px acumin-pro, sans-serif
+                    margin-bottom: 2px
+                .title
+                    font-size: 18px
+                    font-weight: bold
+        #allnews
+            text-align: right
+            margin-top: 30px
+            a
+                font-size: 18px
+                font-weight: bold
     #showreel-overlay
         display: flex
         position: fixed

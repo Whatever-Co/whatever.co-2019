@@ -1,12 +1,18 @@
 var React = require('react')
+var Router = require('react-router');
+var {Navigation} = Router;
+var $ = require('jquery')
 var MobileDetect = require('mobile-detect')
 var isMobile = !!new MobileDetect(navigator.userAgent).phone()
+var moment = require('moment')
+moment.locale('en')
 
 var Lang = require('./Lang')
+var Link = require('./Link')
 
 module.exports = React.createClass({
 
-    mixins: [Lang],
+    mixins: [Lang, Navigation],
 
     data: {
         en: {
@@ -41,7 +47,34 @@ module.exports = React.createClass({
     getInitialState() {
         var state = this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
         state.showreel = false
+        state.work = []
+        state.news = []
         return state
+    },
+
+    getFeaturedWork() {
+        var data = {
+            'filter[tag]': 'featured',
+            'filter[posts_per_page]': 3,
+            lang: this.context.lang,
+            _wp_json_nonce: window.nonce
+        }
+        $.getJSON('/wp-json/posts', data).done((result) => {
+            this.setState({work: result})
+        })
+    },
+
+    getLatestNews() {
+        var data = {
+            page: 1,
+            'filter[posts_per_page]': 3,
+            'filter[category_name]': 'news',
+            lang:  this.context.lang,
+            _wp_json_nonce: window.nonce
+        }
+        return $.getJSON('/wp-json/posts', data).done(result => {
+            this.setState({ news: result })
+        });
     },
 
     componentDidMount() {
@@ -50,6 +83,8 @@ module.exports = React.createClass({
             window.addEventListener('resize', this._adjustReelAreaSize)
             this._adjustReelAreaSize()
         }
+        this.getFeaturedWork()
+        this.getLatestNews()
     },
 
     componentWillUnmount() {
@@ -58,6 +93,10 @@ module.exports = React.createClass({
             window.removeEventListener('resize', this._adjustReelAreaSize)
             this._adjustReelAreaSize()
         }
+    },
+
+    _onClickWork(slug) {
+        this.transitionTo(`${this.context.langPrefix}/post/${slug}/`);
     },
 
     _onClickWatchReel() {
@@ -105,25 +144,36 @@ module.exports = React.createClass({
                 ` }} />
                 <img src="/assets/showreel-button.png" ref="showreelbutton"></img>
             </div>
-            {isMobile ? <div className="logo3">
-                <img src="/assets/logo3-sp.svg" alt="" />
-                <p dangerouslySetInnerHTML={{ __html: this.state.text_sp }}></p>
-            </div> : <div className="logo3"><img src="/assets/logo3.svg" alt="" /><p dangerouslySetInnerHTML={{ __html: this.state.text_pc }}></p></div>}
-            <img className="text" src={isMobile ? this.state.image_sp : this.state.image_pc} alt={this.state.alt} />
-            <table>
-                <tr>
-                    <td>{this.state.titles[0]} :</td>
-                    <td>{this.state.names[0]}</td>
-                </tr>
-                <tr>
-                    <td>{this.state.titles[1]} :</td>
-                    <td>{this.state.names[1]}</td>
-                </tr>
-                <tr>
-                    <td>{this.state.titles[2]} :</td>
-                    <td>{this.state.names[2]}</td>
-                </tr>
-            </table>
+            <img id="makewe" src={isMobile ? "/assets/makewhatever-sp.png" : "/assets/makewhatever.png"} />
+            <div id="about"><Link to="/about/">ABOUT</Link></div>
+            <div id="vline"></div>
+            <div id="featured-work">
+                <img src="/assets/featured-work.png" width="251"/>
+                <div className="items">
+                    {this.state.work.map(entry=> {
+                        var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
+                        return <div key={entry.slug} className="work" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
+                            <div className="title" dangerouslySetInnerHTML={{__html: entry.title}}></div>
+                            <img src={isMobile ? "/assets/learnmore-sp.png" : "/assets/learnmore.png"} width="160"></img>
+                        </div>
+                    })}
+                </div>
+                <div id="allwork"><Link to="/work/">ALL WORK</Link></div>
+            </div>
+            <div id="news">
+                <img src="/assets/news.png" width="84"/>
+                <div className="items">
+                    {this.state.news.map(entry=> {
+                            var style = { backgroundImage: entry.featured_image ? `url(${entry.featured_image.source})` : '' }
+                            var link = `${this.context.langPrefix}/post/${entry.slug}/`
+                            return <div key={entry.slug} className="news" style={style} onClick={this._onClickWork.bind(this, entry.slug)}>
+                                <div className="date">{moment(entry.date_gmt).format('LL')}</div>
+                                <div className="title"><Link to={link} dangerouslySetInnerHTML={{__html: entry.title}}></Link></div>
+                            </div>
+                        })}
+                </div>
+                <div id="allnews"><Link to="/news/">ALL NEWS</Link></div>
+            </div>
             { this.state.showreel ? <div id="showreel-overlay" ref="overlay">
                 <iframe src="https://www.youtube.com/embed/yVS4w0FkmT4?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <button ref="close"><img src="/assets/close.png"/></button>

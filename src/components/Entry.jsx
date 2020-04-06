@@ -22,7 +22,7 @@ module.exports = React.createClass({
         var href = $(e.currentTarget).attr('href')
         if (href.match(/^\w+:/i)) {
             window.open(href)
-        } if (href.match(/^\/\w{2}\//)) {
+        } else if (href.match(/^\/\w{2}\//)) {
             location.href = href
         } else {
             if (this.context.langPrefix && href.indexOf(this.context.langPrefix) != 0) {
