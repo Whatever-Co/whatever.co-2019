@@ -33,7 +33,7 @@ module.exports = React.createClass({
             ],
             about4: [
                 {
-                    title: "Creative Commune WHEREVER の運営",
+                    title: "Creative Commune<br/>WHEREVER の運営",
                     text: "面白いモノが作りたい！という共通の思想を持ったチームが近くで働き化学反応を起こせるように、WHEREVER を設立・運営しています。"
                 }, {
                     title: "優秀な仲間を集める<br/>Co-creator 制度",
@@ -74,47 +74,39 @@ module.exports = React.createClass({
     },
 
     render() {
+        var prefix = "-" + this.context.lang
+        if (isMobile) prefix += "-sp"
+        console.log(prefix)
         return <div className="about">
             <img className="about-text" src={isMobile ? "/assets/makewhatever-sp.svg" : "/assets/makewhatever.svg"} alt="Make whatever. Rules, whatever." />
             <img className="about-poem" src={isMobile ? this.state.poem_sp : this.state.poem_pc} alt={this.state.poem_alt} />
             <div className="about-chiefs">
                 <Link className="about-chief" to="/team/yusuke/">
                     <img src="https://whatever.co/wp-content/uploads/2018/01/dotbydot7168.jpg" />
-                    <div className="about-chief-title">Global CEO / Founder</div>
+                    <div className="about-chief-title">CEO / Executive Producer</div>
                     <div className="about-chief-name-ja">富永 勇亮</div>
                     <div className="about-chief-name-en">Yusuke Tominaga</div>
                 </Link>
                 <Link className="about-chief" to="/team/masa/">
                     <img src="https://whatever.co/wp-content/uploads/2019/06/masa-2.jpg" />
-                    <div className="about-chief-title">Creative Director / CCO</div>
+                    <div className="about-chief-title">CCO / Creative Director</div>
                     <div className="about-chief-name-ja">川村 真司</div>
                     <div className="about-chief-name-en">Masashi Kawamura</div>
                 </Link>
                 <Link className="about-chief" to="/team/saqoosha/">
                     <img src="https://whatever.co/wp-content/uploads/2018/01/dotbydot7043.jpg" />
-                    <div className="about-chief-title">Programmer / CTO</div>
+                    <div className="about-chief-title">CTO / Programmer</div>
                     <div className="about-chief-name-ja">Saqoosha</div>
                     <div className="about-chief-name-en">さくーしゃ</div>
                 </Link>
             </div>
 
             <img className="about-aboutus-title" src="/assets/aboutus.png" alt="ABOUT US" />
-            <div className="about-1">
-                <img className="about-aboutus-title2" src="/assets/about-1-ja.png" />
-                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[0] }}></div>
-            </div>
-            <div className="about-2">
-                <img className="about-aboutus-title2" src="/assets/about-2-ja.png" />
-                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[1] }}></div>
-            </div>
-            <div className="about-3">
-                <img className="about-aboutus-title2" src="/assets/about-3-ja.png" />
-                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[2] }}></div>
-            </div>
-            <div className="about-4">
-                <img className="about-aboutus-title2" src="/assets/about-4-ja.png" />
-                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[3] }}></div>
-            </div>
+            {[0, 1, 2, 3].map(i => <div className={"about-" + (i + 1)}>
+                <img className="about-aboutus-title2" src={"/assets/about-" + (i + 1) + prefix + ".png"} />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[i] }}></div>
+                {isMobile ? <img className="about-aboutus-image" src={"/assets/about-" + (i + 1) + "-sp.jpg"} /> : null}
+            </div>)}
             <div className="about-4-detail">
                 {this.state.about4.map(item => <div className="about-4-detail-item">
                     <div className="about-4-detail-item-title" dangerouslySetInnerHTML={{ __html: item.title }}></div>
@@ -122,7 +114,7 @@ module.exports = React.createClass({
                 </div>)}
             </div>
             <div className="about-5">
-                <img src="/assets/about-5-ja.png" />
+                <img src={"/assets/about-5" + prefix + ".png"} />
                 <div dangerouslySetInnerHTML={{ __html: this.state.about[4] }}></div>
             </div>
             <div className="about-alliances">
@@ -159,7 +151,7 @@ module.exports = React.createClass({
             </div>
 
             <img className="about-ourclients-title" src="/assets/ourclients.png" alt="OUT CLIENTS" />
-            <img className="about-ourclients-table" src="/assets/client-logo.png" alt="" />
+            <img className="about-ourclients-table" src={"/assets/client-logo" + (isMobile ? "-sp" : "") + ".png"} alt="" />
         </div>
     }
 
