@@ -24,6 +24,28 @@ module.exports = React.createClass({
             poem_pc: '/assets/poem-ja.svg',
             poem_sp: '/assets/poem-ja-sp.svg',
             poem_alt: 'わたしたちは、誰も見たことがないようなアイデアを考え、あらゆる方法でそれを実現していくクリエイティブスタジオです。東京、ニューヨーク、台北、ベルリンの拠点を活かし、世界を舞台に広告やブランディングから、テレビ番組、ゲーム、プロダクトなどのコンテンツや新規事業開発まで、様々な分野のモノづくりを手がけていきます。考えるだけでもない、作るだけでもない、「考えて作る」ことで生まれるアイデアと実現力を武器に、世界中の人に驚かれ愛されるような体験を作り上げていきます。',
+            about: [
+                "考えるだけに終わらず、つくるだけに留まらず、実際にユーザーの手に届き、話題となり、愛されるところまでがモノづくりだと私たちは考えます。<br />その想いの元生み出された作品の数々は、世界中で高い評価を受け、Cannes Lions をはじめ、One Show、Clio、Annecy Animation Film Festival、China 4A でのグランプリや、文化庁メディア芸術祭最優秀賞など、国内外で 100 以上のデザイン賞・広告賞を受賞しています。",
+                "私たちは受託案件だけでなく、自社開発プロジェクトにも力を入れています。<br />単に企画や研究、実験に終わることなく、ユーザーの手に届くまでのプロセスを自社で実践することで、どうすればマーケットに耐えうるレベルまでコンセプトの完成度を高められるかを常に学んでいます。<br />その結果、普通の制作会社では持ち得ない開発力や検証能力、値付けや配送ネットワーク構築、PR、お客様対応などのノウハウを獲得。その経験がクライアントワークにも還元され、様々な企業の商品開発やクリエイティブコンサルティング等に役立てられています。",
+                "日本だけでなくグローバルでの実績とネットワークも、私たちの強みの1つです。<br />前身の PARTY NY（現 Whatever NY）ではプロジェクトの 80% が海外クライアント案件となっており、名実ともにグローバルに活動してきた実績を持っています。<br />日本とグローバルそれぞれの市場を理解し、クリエイティブに落とし込むことができるので、日本企業のグローバルキャンペーンや、海外クライアント・アーティストの日本展開サポートも得意としています。",
+                "自由度の高い採用制度の導入や、コワーキングスペースの運用、コミュニティイベントなどを通して、組織や国境を越えて思いきりモノづくりができる環境をつくっています。",
+                "おもしろいアイデアや特別なノウハウを持つ企業に出資を行ったり、技術者やクリエイティブ人材、役員を派遣することで、自社単独ではやれない領域のプロジェクトに参加し、世の中に新しいものを生み出しています。",
+            ],
+            about4: [
+                {
+                    title: "Creative Commune WHEREVER の運営",
+                    text: "面白いモノが作りたい！という共通の思想を持ったチームが近くで働き化学反応を起こせるように、WHEREVER を設立・運営しています。"
+                }, {
+                    title: "優秀な仲間を集める<br/>Co-creator 制度",
+                    text: "フリーランス/アーティストと会社員とのハイブリッドな働き方ができる制度。すぐれたクリエイティブ人材がプロジェクトに参画しやすい仕組みを整えました。"
+                }, {
+                    title: "働く場所は<br/>世界中どこでも",
+                    text: "様々なクリエイターとのグローバルネットワークを駆使して、働くフィールドを世界中に拡げ、在宅ワークでもグローバルクライアントの仕事ができるプロセスを構築しています。"
+                }, {
+                    title: "作り手を大切にする<br/>クレジットのルール",
+                    text: "プロジェクトのコアとなるクリティカルなアイデアを出した人をクレジットに記載する社内ルールを定めています。役職に関わらずフラットにアイデアを評価し、称える制度です。"
+                },
+            ],
             cotodama: 'Lyric Speaker の開発・ライセンス提供を行うジョイント・ベンチャー。SIX、WOW、THE GUILD との共同出資、及び役員・技術者を派遣。',
             bassdrum: '清水幹太をはじめ、日本をリードするテクニカルディレクターが集まった世界初のテクニカルディレクター集団。出資、及び役員を派遣。',
             yummysake: '機械学習 x ブラインドテイスティングで好みの日本酒がわかるサービス。出資、及び技術者を派遣。',
@@ -38,12 +60,17 @@ module.exports = React.createClass({
             bassdrum: '由 Qanta Shimizu 等引領日本業績 technical director 組成。是全世界第一個 technical director 匯集組織。提供出資以及指派經營管理者。',
             yummysake: '透過 Machine Learning x Blind Tasting 辨識使用者日本酒偏好的服務。提供出資以及指派經營管理者。',
             kasa: '特別為博物館和及公共空間提供互動體驗的企劃與開發的創意團隊。與 Kudos 及 Conduit 一同設立於 NY。',
-            wtfc: '這是我們與東北新社共同出資的合資公司。 ​​一同經營 co-working space「WHEREVER」的營運，同時拓展新事業開發和提供全球化的創意設計服務，其中營運模式包含出資以及指派經營管理者。"',
+            wtfc: '這是我們與東北新社共同出資的合資公司。 ​​一同經營 co-working space「WHEREVER」的營運，同時拓展新事業開發和提供全球化的創意設計服務，其中營運模式包含出資以及指派經營管理者。',
         },
     },
 
     getInitialState() {
         return this.data[this.context.lang] ? this.data[this.context.lang] : this.data['en']
+    },
+
+    _onClick(href) {
+        console.log(href)
+        window.open(href, '_blank')
     },
 
     render() {
@@ -52,7 +79,7 @@ module.exports = React.createClass({
             <img className="about-poem" src={isMobile ? this.state.poem_sp : this.state.poem_pc} alt={this.state.poem_alt} />
             <div className="about-chiefs">
                 <Link className="about-chief" to="/team/yusuke/">
-                    <img src="https://whatever.co/wp-content/uploads/2018/01/dotbydot7168.jpg"/>
+                    <img src="https://whatever.co/wp-content/uploads/2018/01/dotbydot7168.jpg" />
                     <div className="about-chief-title">Global CEO / Founder</div>
                     <div className="about-chief-name-ja">富永 勇亮</div>
                     <div className="about-chief-name-en">Yusuke Tominaga</div>
@@ -70,37 +97,69 @@ module.exports = React.createClass({
                     <div className="about-chief-name-en">さくーしゃ</div>
                 </Link>
             </div>
-            <img className="about-partner-title" src="/assets/partners.png" alt="PARTNERS" />
-            <div className="about-partners">
-                <div>
-                    <a href="https://lyric-speaker.com/">
-                        <img src="/assets/cotodama.png" alt="COTODAMA" />
-                    </a>
-                    <div>{this.state.cotodama}</div>
+
+            <img className="about-aboutus-title" src="/assets/aboutus.png" alt="ABOUT US" />
+            <div className="about-1">
+                <img className="about-aboutus-title2" src="/assets/about-1-ja.png" />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[0] }}></div>
+            </div>
+            <div className="about-2">
+                <img className="about-aboutus-title2" src="/assets/about-2-ja.png" />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[1] }}></div>
+            </div>
+            <div className="about-3">
+                <img className="about-aboutus-title2" src="/assets/about-3-ja.png" />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[2] }}></div>
+            </div>
+            <div className="about-4">
+                <img className="about-aboutus-title2" src="/assets/about-4-ja.png" />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[3] }}></div>
+            </div>
+            <div className="about-4-detail">
+                {this.state.about4.map(item => <div className="about-4-detail-item">
+                    <div className="about-4-detail-item-title" dangerouslySetInnerHTML={{ __html: item.title }}></div>
+                    <div className="about-4-detail-item-text">{item.text}</div>
+                </div>)}
+            </div>
+            <div className="about-5">
+                <img src="/assets/about-5-ja.png" />
+                <div dangerouslySetInnerHTML={{ __html: this.state.about[4] }}></div>
+            </div>
+            <div className="about-alliances">
+                <div style={{ backgroundImage: "url(/assets/cotodama.png)" }} onClick={this._onClick.bind(this, "https://lyric-speaker.com/")}>
+                    <div>
+                        <b>COTODAMA</b>
+                        <span>{this.state.cotodama}</span>
+                    </div>
                 </div>
-                <div>
-                    <a href="https://bassdrum.org/">
-                        <img src="/assets/bassdrum.png" alt="BASSDRUM" />
-                    </a>
-                    <div>{this.state.bassdrum}</div>
+                <div style={{ backgroundImage: "url(/assets/bassdrum.png)" }} onClick={this._onClick.bind(this, "https://bassdrum.org//")}>
+                    <div>
+                        <b>BASSDRUM</b>
+                        <span>{this.state.bassdrum}</span>
+                    </div>
                 </div>
-                <div>
-                    <a href="https://yummysake.jp/">
-                        <img src="/assets/yummysake.png" alt="YUMMY SAKE" />
-                    </a>
-                    <div>{this.state.yummysake}</div>
+                <div style={{ backgroundImage: "url(/assets/yummysake.png)" }} onClick={this._onClick.bind(this, "https://yummysake.jp/")}>
+                    <div>
+                        <b>YUMMY SAKE</b>
+                        <span>{this.state.yummysake}</span>
+                    </div>
                 </div>
-                <div>
-                    <a href="https://kasa-made.com/">
-                        <img src="/assets/kasa.png" alt="kasa" />
-                    </a>
-                    <div>{this.state.kasa}</div>
+                <div style={{ backgroundImage: "url(/assets/kasa.png)" }} onClick={this._onClick.bind(this, "https://kasa-made.com/")}>
+                    <div>
+                        <b>kasa</b>
+                        <span>{this.state.kasa}</span>
+                    </div>
                 </div>
-                <div>
-                    <img src="/assets/wtfc.png" alt="WTFC" />
-                    <div>{this.state.wtfc}</div>
+                <div style={{ backgroundImage: "url(/assets/wtfc.png)" }} onClick={this._onClick.bind(this, "https://wtfc.jp/")}>
+                    <div>
+                        <b>WTFC</b>
+                        <span>{this.state.wtfc}</span>
+                    </div>
                 </div>
             </div>
+
+            <img className="about-ourclients-title" src="/assets/ourclients.png" alt="OUT CLIENTS" />
+            <img className="about-ourclients-table" src="/assets/client-logo.png" alt="" />
         </div>
     }
 
