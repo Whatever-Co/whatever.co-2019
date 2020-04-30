@@ -14,11 +14,36 @@ module.exports = React.createClass({
             poem_pc: '/assets/poem-en.svg',
             poem_sp: '/assets/poem-en-sp.svg',
             poem_alt: 'Whatever is a creative studio that aims to conceive unexplored ideas, and bring them to life by whatever means possible. Based in Tokyo, New York, Taipei, and Berlin, our multidisciplinary team allows us to produce innovative work in various creative fields such as advertising and brand design, to content productions such as TV  shows, products, and service designs. By “thinking and making” under one roof, we strive to create beautiful experiences that can be talked and endeared by the people around the world.',
-            cotodama: 'A joint venture to develop and license Lyric Speaker, co-funded with SIX, WOW and THE GUILD. Whatever also provides technical and management support.',
-            bassdrum: 'The world’s first Technical Directors collective formed by Qanta Shimizu together with the industry-leading Technical Directors in Japan. Financial and management support provided by Whatever.',
-            yummysake: 'Yummy Sake is the unique tasting service to analyze customer\'s sake preference using blind tasting and machine learning. Financial and technical support provided by Whatever.',
-            kasa: 'Kasa is a creative unit specialized in developing interactive experiences for museums and public spaces. Co-founded with Kudos and Conduit in New York.',
-            wtfc: 'A joint company co-funded and co-managed with Tohokushinsha Film Corporation. Dedicated for the new business development and global creative services as well as co-operating the coworking space "WHEREVER."',
+            about: [
+                'As thinkers and makers, our goal is to deliver sensational and impactful experiences to the user. Our commitment lies in creating whatever that inspires.<br/>Our craft has earned us global recognition; over hundreds of creative awards at home and abroad including Cannes Lions Gold, Grand Prix at One Show, Clio, Annecy Animation Film Festival, China 4A and Japan Media Art Festival.',
+                'We are equipped with extensive in-house R&D/NPD experience.<br/>Creation doesn’t end at conception and research; ideas are refined to meet / beat market expectations through an iterative process carried out in-house.<br/>This practice has enabled us to acquire marketing skills and insights outside of the traditional production company business model; product development and verification, pricing, logistics network, customer support, small-budget PR, etc.<br/>As a result, we have been tasked with development and creative consultation work by various clients.',
+                'One of our strengths is our track record and network, not only in Japan but also globally.<br/>At the predecessor company, PARTY NY (now known as Whatever NY), 80% of the work was for overseas clients so we have the proven track record of working on a global scale.<br/>As we understand both Japanese and global markets and are able to translate this into creative work, we have been so successful in supporting overseas clients and artists with their marketing communications for Japan market as well as developing global campaigns for Japanese clients.',
+                'We create the environment where creators can fully enjoy working across different countries and organizations through our unique operations.',
+                'By investing in companies with interesting ideas and special know-how, and/or by providing engineer, creative and executive resources, we participate in projects in areas that could not be done by our own and create innovative products and services.'
+            ],
+            about4: [
+                {
+                    title: 'Creative Commune “WHEREVER”',
+                    text: 'We operate WHEREVER, a workplace/community for the creators who share the same passion to make something wonderful so we can work together closely and create chemical reactions.'
+                },
+                {
+                    title: 'Co-creator system',
+                    text: 'We have put in place a highly flexible employment system that allows for a hybrid of a freelance/artist and an employee, making it easy for the best creative talents to get involved in our projects.'
+                },
+                {
+                    title: 'Work anywhere in the world',
+                    text: 'With our global network of diverse creators, our field of work is all around the world. It also enables us to work on global projects anywhere - even from home!'
+                },
+                {
+                    title: 'Credit rule that cares for the creators',
+                    text: 'We have the internal rule in place to credit those who come up with the core critical idea for the project, as we evaluate and celebrate ideas in a flat manner regardless of position.'
+                },
+            ],
+            cotodama: 'Joint venture with SIX, WOW and THE GUILD, Lyric Speaker development and licensing.',
+            bassdrum: 'A tech director collective led by Qanta Shimizu. We accelerate the growth rate of startups by dispatching tech specialists such as CTOs and CDO to companies: Cork, Bascule, AID-DCC etc.',
+            yummysake: 'A service that helps you to discover which saké best suits your palate through AI and blind tasting.',
+            kasa: 'KASA produces high-impact interactive experiences for cultural, corporate, and public spaces. Our multimedia installations engage audiences through storytelling, technology, and design.',
+            wtfc: 'As a joint investment with TOHOKUSHINSHA FILM CORPORATION, Whatever has founded a new company, WTFC, Inc.',
         },
         ja: {
             poem_pc: '/assets/poem-ja.svg',
