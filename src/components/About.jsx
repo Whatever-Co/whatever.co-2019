@@ -200,8 +200,8 @@ module.exports = React.createClass({
                 {isMobile ? <img className="about-aboutus-image" src={"/assets/about-" + (i + 1) + "-sp.jpg"} /> : null}
             </div>)}
             <div className="about-4-detail">
-                {this.state.about4.map(item => <div className="about-4-detail-item">
-                    <div className="about-4-detail-item-title" dangerouslySetInnerHTML={{ __html: item.title }}></div>
+                {this.state.about4.map((item, index) => <div className="about-4-detail-item">
+                    <div className="about-4-detail-item-title" dangerouslySetInnerHTML={{ __html: (!isMobile && ((this.context.lang == 'en' && index == 1) || (this.context.lang == 'zh' && index == 2)) ? '<br/>' : '') + item.title }}></div>
                     <div className="about-4-detail-item-text">{item.text}</div>
                 </div>)}
             </div>
