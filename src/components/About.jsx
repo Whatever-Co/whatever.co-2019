@@ -15,11 +15,26 @@ module.exports = React.createClass({
             poem_sp: '/assets/poem-en-sp.svg',
             poem_alt: 'Whatever is a creative studio that aims to conceive unexplored ideas, and bring them to life by whatever means possible. Based in Tokyo, New York, Taipei, and Berlin, our multidisciplinary team allows us to produce innovative work in various creative fields such as advertising and brand design, to content productions such as TV  shows, products, and service designs. By “thinking and making” under one roof, we strive to create beautiful experiences that can be talked and endeared by the people around the world.',
             about: [
-                'As thinkers and makers, our goal is to deliver sensational and impactful experiences to the user. Our commitment lies in creating whatever that inspires.<br/>Our craft has earned us global recognition; over hundreds of creative awards at home and abroad including Cannes Lions Gold, Grand Prix at One Show, Clio, Annecy Animation Film Festival, China 4A and Japan Media Art Festival.',
-                'We are equipped with extensive in-house R&D/NPD experience.<br/>Creation doesn’t end at conception and research; ideas are refined to meet / beat market expectations through an iterative process carried out in-house.<br/>This practice has enabled us to acquire marketing skills and insights outside of the traditional production company business model; product development and verification, pricing, logistics network, customer support, small-budget PR, etc.<br/>As a result, we have been tasked with development and creative consultation work by various clients.',
-                'One of our strengths is our track record and network, not only in Japan but also globally.<br/>At the predecessor company, PARTY NY (now known as Whatever NY), 80% of the work was for overseas clients so we have the proven track record of working on a global scale.<br/>As we understand both Japanese and global markets and are able to translate this into creative work, we have been so successful in supporting overseas clients and artists with their marketing communications for Japan market as well as developing global campaigns for Japanese clients.',
-                'We create the environment where creators can fully enjoy working across different countries and organizations through our unique operations.',
-                'By investing in companies with interesting ideas and special know-how, and/or by providing engineer, creative and executive resources, we participate in projects in areas that could not be done by our own and create innovative products and services.'
+                {
+                    title: 'Diverse Ideas & Execution',
+                    text: 'As thinkers and makers, our goal is to deliver sensational and impactful experiences to the user. Our commitment lies in creating whatever that inspires.<br/>Our craft has earned us global recognition; over hundreds of creative awards at home and abroad including Cannes Lions Gold, Grand Prix at One Show, Clio, Annecy Animation Film Festival, China 4A and Japan Media Art Festival.',
+                },
+                {
+                    title: 'In-house R&D/Product Innovation',
+                    text: 'We are equipped with extensive in-house R&D/NPD experience.<br/>Creation doesn’t end at conception and research; ideas are refined to meet / beat market expectations through an iterative process carried out in-house.<br/>This practice has enabled us to acquire marketing skills and insights outside of the traditional production company business model; product development and verification, pricing, logistics network, customer support, small-budget PR, etc.<br/>As a result, we have been tasked with development and creative consultation work by various clients.',
+                },
+                {
+                    title: 'Global Track Record & Network',
+                    text: 'One of our strengths is our track record and network, not only in Japan but also globally.<br/>At the predecessor company, PARTY NY (now known as Whatever NY), 80% of the work was for overseas clients so we have the proven track record of working on a global scale.<br/>As we understand both Japanese and global markets and are able to translate this into creative work, we have been so successful in supporting overseas clients and artists with their marketing communications for Japan market as well as developing global campaigns for Japanese clients.',
+                },
+                {
+                    title: 'Creating Best Place for Creators',
+                    text: 'We create the environment where creators can fully enjoy working across different countries and organizations through our unique operations.',
+                },
+                {
+                    title: 'Alliances in various forms',
+                    text: 'By investing in companies with interesting ideas and special know-how, and/or by providing engineer, creative and executive resources, we participate in projects in areas that could not be done by our own and create innovative products and services.'
+                },
             ],
             about4: [
                 {
@@ -50,11 +65,26 @@ module.exports = React.createClass({
             poem_sp: '/assets/poem-ja-sp.svg',
             poem_alt: 'わたしたちは、誰も見たことがないようなアイデアを考え、あらゆる方法でそれを実現していくクリエイティブスタジオです。東京、ニューヨーク、台北、ベルリンの拠点を活かし、世界を舞台に広告やブランディングから、テレビ番組、ゲーム、プロダクトなどのコンテンツや新規事業開発まで、様々な分野のモノづくりを手がけていきます。考えるだけでもない、作るだけでもない、「考えて作る」ことで生まれるアイデアと実現力を武器に、世界中の人に驚かれ愛されるような体験を作り上げていきます。',
             about: [
-                "考えるだけに終わらず、つくるだけに留まらず、実際にユーザーの手に届き、話題となり、愛されるところまでがモノづくりだと私たちは考えます。<br />その想いの元生み出された作品の数々は、世界中で高い評価を受け、Cannes Lions をはじめ、One Show、Clio、Annecy Animation Film Festival、China 4A でのグランプリや、文化庁メディア芸術祭最優秀賞など、国内外で 100 以上のデザイン賞・広告賞を受賞しています。",
-                "私たちは受託案件だけでなく、自社開発プロジェクトにも力を入れています。<br />単に企画や研究、実験に終わることなく、ユーザーの手に届くまでのプロセスを自社で実践することで、どうすればマーケットに耐えうるレベルまでコンセプトの完成度を高められるかを常に学んでいます。<br />その結果、普通の制作会社では持ち得ない開発力や検証能力、値付けや配送ネットワーク構築、PR、お客様対応などのノウハウを獲得。その経験がクライアントワークにも還元され、様々な企業の商品開発やクリエイティブコンサルティング等に役立てられています。",
-                "日本だけでなくグローバルでの実績とネットワークも、私たちの強みの1つです。<br />前身の PARTY NY（現 Whatever NY）ではプロジェクトの 80% が海外クライアント案件となっており、名実ともにグローバルに活動してきた実績を持っています。<br />日本とグローバルそれぞれの市場を理解し、クリエイティブに落とし込むことができるので、日本企業のグローバルキャンペーンや、海外クライアント・アーティストの日本展開サポートも得意としています。",
-                "自由度の高い採用制度の導入や、コワーキングスペースの運用、コミュニティイベントなどを通して、組織や国境を越えて思いきりモノづくりができる環境をつくっています。",
-                "おもしろいアイデアや特別なノウハウを持つ企業に出資を行ったり、技術者やクリエイティブ人材、役員を派遣することで、自社単独ではやれない領域のプロジェクトに参加し、世の中に新しいものを生み出しています。",
+                {
+                    title: 'ジャンルレスな企画力とクラフト力',
+                    text: '考えるだけに終わらず、つくるだけに留まらず、実際にユーザーの手に届き、話題となり、愛されるところまでがモノづくりだと私たちは考えます。<br />その想いの元生み出された作品の数々は、世界中で高い評価を受け、Cannes Lions をはじめ、One Show、Clio、Annecy Animation Film Festival、China 4A でのグランプリや、文化庁メディア芸術祭最優秀賞など、国内外で 100 以上のデザイン賞・広告賞を受賞しています。'
+                },
+                {
+                    title: '自社プロダクト開発を通じたノウハウ',
+                    text: '私たちは受託案件だけでなく、自社開発プロジェクトにも力を入れています。<br />単に企画や研究、実験に終わることなく、ユーザーの手に届くまでのプロセスを自社で実践することで、どうすればマーケットに耐えうるレベルまでコンセプトの完成度を高められるかを常に学んでいます。<br />その結果、普通の制作会社では持ち得ない開発力や検証能力、値付けや配送ネットワーク構築、PR、お客様対応などのノウハウを獲得。その経験がクライアントワークにも還元され、様々な企業の商品開発やクリエイティブコンサルティング等に役立てられています。'
+                },
+                {
+                    title: 'グローバルでの実績とネットワーク',
+                    text: '日本だけでなくグローバルでの実績とネットワークも、私たちの強みの1つです。<br />前身の PARTY NY（現 Whatever NY）ではプロジェクトの 80% が海外クライアント案件となっており、名実ともにグローバルに活動してきた実績を持っています。<br />日本とグローバルそれぞれの市場を理解し、クリエイティブに落とし込むことができるので、日本企業のグローバルキャンペーンや、海外クライアント・アーティストの日本展開サポートも得意としています。'
+                },
+                {
+                    title: '楽しく作れる環境をつくる',
+                    text: '自由度の高い採用制度の導入や、コワーキングスペースの運用、コミュニティイベントなどを通して、組織や国境を越えて思いきりモノづくりができる環境をつくっています。'
+                },
+                {
+                    title: '様々な形のアライアンス',
+                    text: 'おもしろいアイデアや特別なノウハウを持つ企業に出資を行ったり、技術者やクリエイティブ人材、役員を派遣することで、自社単独ではやれない領域のプロジェクトに参加し、世の中に新しいものを生み出しています。'
+                },
             ],
             about4: [
                 {
@@ -128,8 +158,8 @@ module.exports = React.createClass({
 
             <img className="about-aboutus-title" src="/assets/aboutus.png" alt="ABOUT US" />
             {[0, 1, 2, 3].map(i => <div className={"about-" + (i + 1)}>
-                <img className="about-aboutus-title2" src={"/assets/about-" + (i + 1) + prefix + ".png"} />
-                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[i] }}></div>
+                <img className="about-aboutus-title2" src={"/assets/about-" + (i + 1) + prefix + ".png"} alt={this.state.about[i].title} />
+                <div className="about-aboutus-text" dangerouslySetInnerHTML={{ __html: this.state.about[i].text }}></div>
                 {isMobile ? <img className="about-aboutus-image" src={"/assets/about-" + (i + 1) + "-sp.jpg"} /> : null}
             </div>)}
             <div className="about-4-detail">
@@ -139,8 +169,8 @@ module.exports = React.createClass({
                 </div>)}
             </div>
             <div className="about-5">
-                <img src={"/assets/about-5" + prefix + ".png"} />
-                <div dangerouslySetInnerHTML={{ __html: this.state.about[4] }}></div>
+                <img src={"/assets/about-5" + prefix + ".png"} alt={this.state.about[4].title} />
+                <div dangerouslySetInnerHTML={{ __html: this.state.about[4].text }}></div>
             </div>
             <div className="about-alliances">
                 <div style={{ backgroundImage: "url(/assets/cotodama.png)" }} onClick={this._onClick.bind(this, "https://lyric-speaker.com/")}>
