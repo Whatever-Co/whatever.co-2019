@@ -34,7 +34,7 @@
     "grunt-express": "1.4.1",
     "grunt-parallel": "0.5.1",
     "grunt-rsync": "2.0.1",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "jquery.transit": "0.9.12",
     "mobile-detect": "1.4.4",
     "moment": "2.24.0",
