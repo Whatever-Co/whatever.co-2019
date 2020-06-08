@@ -175,7 +175,7 @@ module.exports = React.createClass({
                 <div id="allnews"><Link to="/news/">ALL NEWS</Link></div>
             </div>
             { this.state.showreel ? <div id="showreel-overlay" ref="overlay">
-                <iframe src="https://www.youtube.com/embed/yVS4w0FkmT4?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/rsBTSWTbH4I?rel=0;controls=0;modestbranding=0;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <button ref="close"><img src="/assets/close.png"/></button>
             </div> : null }
         </div>
