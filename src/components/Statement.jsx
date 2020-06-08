@@ -101,7 +101,7 @@ module.exports = React.createClass({
 
     _onClickWatchReel() {
         if (isMobile) {
-            window.open('https://www.youtube.com/watch?v=yVS4w0FkmT4')
+            window.open('https://www.youtube.com/watch?v=rsBTSWTbH4I')
         } else {
             this.setState({showreel: true})
             this.refs.overlay.getDOMNode().addEventListener('click', this._onClickReelOverlay)
