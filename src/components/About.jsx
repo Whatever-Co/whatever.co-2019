@@ -216,7 +216,7 @@ module.exports = React.createClass({
                         <span>{this.state.cotodama}</span>
                     </div>
                 </div>
-                <div style={{ backgroundImage: "url(/assets/bassdrum.png)" }} onClick={this._onClick.bind(this, "https://bassdrum.org//")}>
+                <div style={{ backgroundImage: "url(/assets/bassdrum.png)" }} onClick={this._onClick.bind(this, "https://bassdrum.org/")}>
                     <div>
                         <b>BASSDRUM</b>
                         <span>{this.state.bassdrum}</span>
