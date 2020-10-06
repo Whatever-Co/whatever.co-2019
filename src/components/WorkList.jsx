@@ -18,7 +18,7 @@ module.exports = React.createClass({
 
     mixins: [State, Navigation, Lang],
 
-    regionOrder: ["ALL", "TOKYO", "NEW YORK", "TAIPEI"],
+    regionOrder: ["ALL", "TOKYO", "NEW YORK", "TAIPEI", "BERLIN"],
 
     getInitialState() {
         return { regionTags: [], typeTags: [], entries: [] }
