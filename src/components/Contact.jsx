@@ -31,7 +31,7 @@ module.exports = React.createClass({
                 },
                 {
                     name: "TAIPEI",
-                    address: "18F, No.97, Songren Rd., Xinyi Dist., Taipei City 110, Taiwan",
+                    address: "No. 97, Songren Road, Xinyi District, Taipei City 11073, Taiwan",
                     maplink: "https://goo.gl/maps/1ytCrzEK9EPKGWxe8",
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
@@ -64,7 +64,7 @@ module.exports = React.createClass({
                 },
                 {
                     name: "TAIPEI",
-                    address: "18F, No.97, Songren Rd., Xinyi Dist., Taipei City 110, Taiwan",
+                    address: "No. 97, Songren Road, Xinyi District, Taipei City 11073, Taiwan",
                     maplink: "https://goo.gl/maps/1ytCrzEK9EPKGWxe8",
                     phone: "+886-908-222-101",
                     president: "室市 栄二",
@@ -97,7 +97,7 @@ module.exports = React.createClass({
                 },
                 {
                     name: "台北",
-                    address: "台北市信義區松仁路 97 號 18 樓",
+                    address: "台北市信義區松仁路 97 號",
                     maplink: "https://goo.gl/maps/1ytCrzEK9EPKGWxe8",
                     phone: "+886-908-222-101",
                     president: "Eiji Muroichi",
